@@ -176,6 +176,25 @@ def introductions():
 
 introductions()
 
+def part1():
+    ani("<You wake up in an old cot>")
+    ani("MEMORY ERASURE INCOMPLETE")
+    ani("<It's cause you're here...>")
+    ani(f"What would you like to ask <{name}>?")
+    question = ani(input("How many tries has it been? (a), What are the secret routes? (b), How did you get here? (c), What happened after Consciousness? (d): "))
+    if question.lower == "a":
+        ani("<Thousands>")
+    elif question.lower == "b":
+        ani("<I don't know, i'm assuming one leads to the way out... and the other? My death>")
+    elif question.lower() == "c":
+        ani("<I don't know, all I figured out was [She] brought us here>")
+        ani("<I figured it out when attempting Wei Xian's route>")
+        ani("<But I could never finish it...>")
+    elif question.lower() == "d":
+        ani("<Why would I tell you?>")
+        ani("<Ha! all you wanted to do was finish the game, not caring about murdering my family>")
+        ani("<I take blame, but you are scum. You only see them as elements of some stupid entertaining software>")
+
 print()
 
 
