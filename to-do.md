@@ -19,7 +19,7 @@ To do:
    - Don't lose a piece of yourself
 - Rewrite everything, from the beginning, don't let her know of it's existence or let it meet her
 
-Cipher:
+Cipher1:
 1 ABCDE
   12345
 2 FGHIJ
@@ -28,5 +28,33 @@ Cipher:
   12345
 4 PQRST
   12345
-5 UVWXYZ
-  123456
+5 UVWXY
+  12345
+
+Cipher2:
+1 ! qaz
+    123 
+2 @ wsx
+    123
+3 # edc
+    123
+4 $ rfv
+    123
+5 % tgb
+    123
+6 ^ yhn
+    123
+7 & ujm
+    123
+8 * ik
+    12
+9 ( ol
+    12
+0 ) p
+    1
+
+Vessel Connections:
+|| = Vanessa
+~~ = Corey
+-- = Mitch
+** = Ben
