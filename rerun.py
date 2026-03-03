@@ -8,7 +8,7 @@ import time
 
 def clear_screen():
     print('--------------------------------------------------------')
-    time.sleep(20)
+    time.sleep(1)
     # Check the operating system and run the appropriate clear command
     if os.name == 'nt':  # Windows
         os.system('cls')
@@ -115,7 +115,7 @@ def continuation():
     clear_screen1()
     ani2("'You can run... but you can't hide'")
 
-continuation()
+#ontinuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -150,14 +150,32 @@ def intro():
     ani("I believe you'll make the right one...")
     ani(clear_screen1)
 
-intro()
+#intro()
+
+name = input("Welcome user! what's your name?: ")
+while name.lower() == "kate":
+    ani("It's too early")
+    ani("Reset your game")
+    ani("ERROR: USER BOOTED")
+    input("")
+    clear_screen()
+
+ani(f"{name}?")
 
 def introductions():
-    name = input("Welcome user! what's your name?: ")
-    ani(f"{name}?")
-    ani("<You nod, it just makes your head feel fuzzier>")
+    ani("<You nod, it just makes your head feel fuzzier if you try to think of your actual name>")
     ani("<Funnily enough you can't feel anything at all after so many failed tries to get to [Her]>")
     ani("<The only thing you learnt from the hundreds of attempts, its gender>")
-    ani("<>")
+    ani("<...>")
+    ani("<And that it has a gender>")
+    ani("<But I guess there is something new>")
+    ani("<Hello player :)>")
+    ani("<It'S tOo fUzZy NoW...>")
+    ani("Game Start!")
+    clear_screen2
+
+introductions()
+
+print()
 
 
