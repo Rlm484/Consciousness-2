@@ -61,3 +61,4 @@ Vessel Connections:
 [] = The firewall
 '' = Soul piece
    = Game or Me
+   

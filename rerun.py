@@ -98,7 +98,7 @@ def continuation():
     ani("<Why am I still here?>")
     ani("<I look around till I find the piece They used last time>")
     ani("<I DID AS YOU ASKED>")
-    ani("[the Consciousness looks at you guiltily and doesn't respond]")
+    ani("[the Consciousness looks at you guiltly and doesn't respond]")
     ani("<You are horrified>")
     ani("<You are horrified because there is no human behind that piece of code>")
     ani("<[The Consiousness] was now a being of its own>")
@@ -125,8 +125,9 @@ def continuation():
     ani("[Termination successful, teleporting to ???]")
     clear_screen1()
     ani2("'You can run... but you can't hide'")
+    clear_screen1()
 
-continuation()
+#continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -159,9 +160,9 @@ def intro():
     ani("If you make certain descisions?")
     ani("You can unlock a secret ending!")
     ani("I believe you'll make the right one...")
-    ani(clear_screen1)
+    clear_screen1()
 
-intro()
+#intro()
 
 name = input("Welcome user! what's your name?: ")
 while name.lower() == "kate":
@@ -185,9 +186,9 @@ def introductions():
     ani("<Murderer>")
     ani("game.exe running...")
     ani("Game Start!")
-    clear_screen2
+    clear_screen2()
 
-introductions()
+#introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -196,10 +197,10 @@ def info(syncronisation):
     ani("<It's cause you're here...>")
     ani(f"What would you like to ask <{name}>?")
     ani("Though that name has no meaning to 🖂︎📄︎")
-    question = ani(input("How many tries has it been? (a), What are the secret routes? (b), How did you get here? (c), What happened after Consciousness? (d): "))
-    if question.lower == "a":
+    question = input("How many tries has it been? (a), What are the secret routes? (b), How did you get here? (c), What happened after Consciousness? (d): ")
+    if question.lower() == "a":
         ani("<Thousands>")
-    elif question.lower == "b":
+    elif question.lower() == "b":
         ani("<I don't know, i'm assuming one leads to the way out... and the other? My death>")
         ani("You are quiet as you process what you just heard...")
         ani("Can NPC's really die?")
@@ -236,11 +237,11 @@ def info(syncronisation):
         ani2("what the f-")
         ani("")
     ani("")
-    clear_screen2
+    clear_screen2()
 
 info(syncronisation)
 
-def part1(syncronisation):
+def part1():
     ani("<Let's just start working towards a route>")
     ani(f"You nod your head towards {name}")
     ani("")
@@ -261,8 +262,17 @@ def part1(syncronisation):
     ani(a)
     ani(b)
     ani("Now it's time to explore your starting point!")
-    ani("You look around and 3 things peak your interest...")
+    ani("<You look around and 3 things peak your interest...>")
     ani("A Closet (a), A Stuffed Toy (b), A Calendar (c)")
+    c1 = input("Which of the 3 will you explore?: ")
+    if c1.lower() == a:
+        ani("<You head towards the Closet>")
+        ani("<But when you reach it you freeze>")
+        ani("<An all too familiar pin pad appears>")
+        ani("<Your stomach lurches as you feel bile rise in your throat>")
+        ani("<Memories flash befor your eyes>")
+
+
 
 print()
 
