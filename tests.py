@@ -30,7 +30,7 @@ def sync(name):
         return name
     elif add == "b":
         print("bad")
-        name += 95
+        name += 5
         print(f"Your syncronisation rate is {name}")
         return name
     else:

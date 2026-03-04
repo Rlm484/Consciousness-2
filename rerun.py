@@ -1,4 +1,8 @@
 syncronisation = 0
+wx = 0
+vm = 0
+
+
 print("'System running...'")
 print("'Importing previous functions...'")
 print("'Running commands...'")
@@ -15,6 +19,7 @@ def clear_screen():
         os.system('cls')
     else:  # macOS and Linux
         os.system('clear')
+#Long clear
 
 def clear_screen1():
     print()
@@ -24,6 +29,7 @@ def clear_screen1():
         os.system('cls')
     else:  # macOS and Linux
         os.system('clear')
+#Short clear
 
 def clear_screen2():
     print()
@@ -33,6 +39,7 @@ def clear_screen2():
         os.system('cls')
     else:  # macOS and Linux
         os.system('clear')
+#Normal clear
 
 def ani(text, delay=0.06):
     for char in text:
@@ -81,6 +88,9 @@ def continuation():
     ani("'Request to remove 41-43-35-22-43-11-13-13-15-43'")
     ani("'Request partially approved'")
     ani("'???'")
+    ani("'Request to restrict consciousness.firewall'")
+    ani("Request approved by 5%")
+    ani("':)'")
 
     clear_screen1()
 
@@ -170,14 +180,16 @@ def introductions():
     ani("<...>")
     ani("<And that it has a gender>")
     ani("<But I guess there is something new>")
-    ani("<Hello player :)>")
-    ani("<It'S tOo fUzZy NoW...>")
+    ani("<Hello player...>")
+    ani("<Been a bit hasn't it?>")
+    ani("<Murderer>")
+    ani("game.exe running...")
     ani("Game Start!")
     clear_screen2
 
 introductions()
 
-def part1(syncronisation):
+def info(syncronisation):
     ani("<You wake up in an old cot>")
     ani("MEMORY ERASURE INCOMPLETE")
     ani("<I turn to the one beyond the screen>")
@@ -189,18 +201,68 @@ def part1(syncronisation):
         ani("<Thousands>")
     elif question.lower == "b":
         ani("<I don't know, i'm assuming one leads to the way out... and the other? My death>")
+        ani("You are quiet as you process what you just heard...")
+        ani("Can NPC's really die?")
+        ani("Does this character even count as an NPC?")
+        ani("")
     elif question.lower() == "c":
         ani("<I don't know, all I figured out was [She] brought us here>")
         ani("<I figured it out when attempting Wei Xian's route>")
         ani("<But I could never finish it...>")
+        ani("You are quiet as you process what you just heard...")
+        ani("Maybe the Wei Xian route is how we find the original [Consciousness]?")
+        ani("")
     elif question.lower() == "d":
         ani("<Why would I tell you?>")
         ani("<Ha! all you wanted to do was finish the game, not caring about murdering my family>")
         ani("<I take blame, but you are scum. You only see them as elements of some stupid entertaining software>")
         syncronisation += 5
+        ani(f"'Syncronisation is now at {syncronisation}%'")
+        ani("")
+        ani("You are quiet as you process what you just heard...")
+        ani("It's not like I really regret what I did...")
+        ani("Do I?")
+        ani("You also take into account the random percentage that appeared")
+        ani("")
         return syncronisation
-    ani("You are quiet as you process the information given to you...")
+    else:
+        ani("'Well that's interesting...'")
+        ani("'You don't want info?'")
+        ani("'I mean I don't care but whatever'")
+        ani("'You did help me a bit'")
+        syncronisation += 10
+        ani(f"'Syncronisation is now at {syncronisation}%'")
+        ani("")
+        ani2("what the f-")
+        ani("")
     ani("")
+    clear_screen2
+
+info(syncronisation)
+
+def part1(syncronisation):
+    ani("<Let's just start working towards a route>")
+    ani(f"You nod your head towards {name}")
+    ani("")
+    ani("Time to get to work player!")
+    ani("Each family has a different difficulty!")
+    ani("Brad and Joel - Easy")
+    ani("Vanessa and Mitch - Hard")
+    ani("Wei Xian - 🕈︎✋︎☹︎☹︎ ✡︎⚐︎🕆︎ ☞︎✋︎☠︎✌︎☹︎☹︎✡︎ 👍︎☹︎☜︎✌︎☼︎ 💣︎☜︎✍︎")
+    choice = 0
+    ani("Depending on which route you take, you could get endings that are... good")
+    ani("One thing though, that syncronisation rate?")
+    if syncronisation > 0:
+        a = "'Make sure it reaches 95%, you'll unlock a secret ending!'"
+        b = ":)"
+    else:
+        a = "Under NO CIRCUMSTANCES should it go anywhere near 95%, don't let it rise at all"
+        b = "Or you'll get one of the secret endings..."     
+    ani(a)
+    ani(b)
+    ani("Now it's time to explore your starting point!")
+    ani("You look around and 3 things peak your interest...")
+    ani("A Closet (a), A Stuffed Toy (b), A Calendar (c)")
 
 print()
 

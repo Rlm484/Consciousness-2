@@ -58,3 +58,6 @@ Vessel Connections:
 ~~ = Corey
 -- = Mitch
 ** = Ben
+[] = The firewall
+'' = Soul piece
+   = Game or Me
