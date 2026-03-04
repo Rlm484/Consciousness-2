@@ -1,3 +1,4 @@
+syncronisation = 0
 print("'System running...'")
 print("'Importing previous functions...'")
 print("'Running commands...'")
@@ -115,7 +116,7 @@ def continuation():
     clear_screen1()
     ani2("'You can run... but you can't hide'")
 
-#ontinuation()
+continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -150,7 +151,7 @@ def intro():
     ani("I believe you'll make the right one...")
     ani(clear_screen1)
 
-#intro()
+intro()
 
 name = input("Welcome user! what's your name?: ")
 while name.lower() == "kate":
@@ -176,11 +177,13 @@ def introductions():
 
 introductions()
 
-def part1():
+def part1(syncronisation):
     ani("<You wake up in an old cot>")
     ani("MEMORY ERASURE INCOMPLETE")
+    ani("<I turn to the one beyond the screen>")
     ani("<It's cause you're here...>")
     ani(f"What would you like to ask <{name}>?")
+    ani("Though that name has no meaning to 🖂︎📄︎")
     question = ani(input("How many tries has it been? (a), What are the secret routes? (b), How did you get here? (c), What happened after Consciousness? (d): "))
     if question.lower == "a":
         ani("<Thousands>")
@@ -194,6 +197,10 @@ def part1():
         ani("<Why would I tell you?>")
         ani("<Ha! all you wanted to do was finish the game, not caring about murdering my family>")
         ani("<I take blame, but you are scum. You only see them as elements of some stupid entertaining software>")
+        syncronisation += 5
+        return syncronisation
+    ani("You are quiet as you process the information given to you...")
+    ani("")
 
 print()
 
