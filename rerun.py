@@ -188,7 +188,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-#introductions()
+introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -273,7 +273,5 @@ def part1():
         ani("<Memories flash befor your eyes>")
 
 
-
-print()
 
 
