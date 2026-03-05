@@ -366,20 +366,15 @@ def part1(rc, syncronisation):
         ani("<You really are useless, we need as much information as possible!>")
         ani('"But youve already made youre choice..."')
     clear_screen2()
-    ani('"You process everything that happened..."')
-    ani('"Process what you have and havent learnt"')
-    ani("<Are you still thinking?>")
-    ani("<We don't have all day>")
-    ani("<Let's move it>")
-    ani('"While sighing and muttering under your breath you tell the character ok"')
-    ani("Congratulations! You've finished the tutorial!")
-    ani("Now, time to meet the families!")
 
 part1(rc, syncronisation)
 clear_screen2()
 
-
-
-
-
-
+ani('"You process everything that happened..."')
+ani('"Process what you have and havent learnt"')
+ani("<Are you still thinking?>")
+ani("<We don't have all day>")
+ani("<Let's move it>")
+ani('"While sighing and muttering under your breath you tell the character ok"')
+ani("Congratulations! You've finished the tutorial!")
+ani("Now, time to meet the families!")
