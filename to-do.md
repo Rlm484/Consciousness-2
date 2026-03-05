@@ -30,8 +30,9 @@ Cipher1:
   12345
 5 UVWXY
   12345
+24-32-24-31-15-22-11-33-15-44
 
-Cipher2:
+Cipher2 (Hint: There are 2 ways to use this cipher):
 1 ! qaz
     123 
 2 @ wsx
@@ -52,6 +53,9 @@ Cipher2:
     12
 0 ) p
     1
+81-42-91-63-31-32-91-31-22-63-51-21-91-41-82-51-41-61-12-63-91-51-62-31-41
+%2-(1-(1-#2-(2-&1-#3-*2
+(Ignore red, does not mean anything)
 
 Vessel Connections:
 || = Vanessa

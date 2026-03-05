@@ -1,7 +1,8 @@
 syncronisation = 0
 wx = 0
 vm = 0
-
+bj = 0
+inv = 0
 
 print("'System running...'")
 print("'Importing previous functions...'")
@@ -188,7 +189,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-introductions()
+#introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -239,7 +240,7 @@ def info(syncronisation):
     ani("")
     clear_screen2()
 
-info(syncronisation)
+#info(syncronisation)
 
 def part1():
     ani("<Let's just start working towards a route>")
@@ -265,12 +266,29 @@ def part1():
     ani("<You look around and 3 things peak your interest...>")
     ani("A Closet (a), A Stuffed Toy (b), A Calendar (c)")
     c1 = input("Which of the 3 will you explore?: ")
-    if c1.lower() == a:
+    if c1.lower() == "a":
         ani("<You head towards the Closet>")
         ani("<But when you reach it you freeze>")
         ani("<An all too familiar pin pad appears>")
         ani("<Your stomach lurches as you feel bile rise in your throat>")
-        ani("<Memories flash befor your eyes>")
+        ani("<Memories flash before your eyes>")
+        ani("<Memories of murder>")
+        ani("<Memories of murdering the small 5 year old>")
+        ani("<Keep going>")
+        ani("")
+        clear_screen2()
+        ani("Wow! You found a pinpad!")
+        ani("Which numbers will you press?: ")
+        input("")
+    elif c1.lower() == "b":
+        ani("bleh")
+    elif c1.lower() == "c":
+        ani("bleh")
+    elif c1.lower() == "d":
+        ani("bleh")    
+    else:
+        ani("bleh")
+part1()
 
 
 
