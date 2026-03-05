@@ -1,16 +1,29 @@
+import sys
+import os
+import time
+
+def clear_screen2():
+    print()
+    time.sleep(3)
+    # Check the operating system and run the appropriate clear command
+    if os.name == 'nt':  # Windows
+        os.system('cls')
+    else:  # macOS and Linux
+        os.system('clear')
+#Normal clear
+
+print("WARNING, SWEARING AND COARSE LANGUAGE")
+clear_screen2()
 syncronisation = 0
 wx = 0
 vm = 0
 bj = 0
 inv = 0
+rc = 0
 
 print("'System running...'")
 print("'Importing previous functions...'")
 print("'Running commands...'")
-
-import sys
-import os
-import time
 
 def clear_screen():
     print('--------------------------------------------------------')
@@ -31,16 +44,6 @@ def clear_screen1():
     else:  # macOS and Linux
         os.system('clear')
 #Short clear
-
-def clear_screen2():
-    print()
-    time.sleep(3)
-    # Check the operating system and run the appropriate clear command
-    if os.name == 'nt':  # Windows
-        os.system('cls')
-    else:  # macOS and Linux
-        os.system('clear')
-#Normal clear
 
 def ani(text, delay=0.06):
     for char in text:
@@ -165,7 +168,8 @@ def intro():
 
 #intro()
 
-name = input("Welcome user! what's your name?: ")
+ani("Welcome user! what's your name?: ")
+name = input("")
 while name.lower() == "kate":
     ani("It's too early")
     ani("Reset your game")
@@ -198,21 +202,22 @@ def info(syncronisation):
     ani("<It's cause you're here...>")
     ani(f"What would you like to ask <{name}>?")
     ani("Though that name has no meaning to 🖂︎📄︎")
-    question = input("How many tries has it been? (a), What are the secret routes? (b), How did you get here? (c), What happened after Consciousness? (d): ")
+    ani('"How many tries has it been? (a)", "What are the secret routes? (b)", "How did you get here? (c)", "What happened after Consciousness? (d)": ')
+    question = input("")
     if question.lower() == "a":
         ani("<Thousands>")
     elif question.lower() == "b":
         ani("<I don't know, i'm assuming one leads to the way out... and the other? My death>")
-        ani("You are quiet as you process what you just heard...")
-        ani("Can NPC's really die?")
-        ani("Does this character even count as an NPC?")
+        ani('"You are quiet as you process what you just heard..."')
+        ani('"Can NPCs really die?"')
+        ani('"Does this character even count as an NPC?"')
         ani("")
     elif question.lower() == "c":
         ani("<I don't know, all I figured out was [She] brought us here>")
         ani("<I figured it out when attempting Wei Xian's route>")
         ani("<But I could never finish it...>")
-        ani("You are quiet as you process what you just heard...")
-        ani("Maybe the Wei Xian route is how we find the original [Consciousness]?")
+        ani('"You are quiet as you process what you just heard..."')
+        ani('"Maybe the Wei Xian route is how we find the original [Consciousness]?"')
         ani("")
     elif question.lower() == "d":
         ani("<Why would I tell you?>")
@@ -221,10 +226,10 @@ def info(syncronisation):
         syncronisation += 5
         ani(f"'Syncronisation is now at {syncronisation}%'")
         ani("")
-        ani("You are quiet as you process what you just heard...")
-        ani("It's not like I really regret what I did...")
-        ani("Do I?")
-        ani("You also take into account the random percentage that appeared")
+        ani('"You are quiet as you process what you just heard..."')
+        ani('"Its not like I really regret what I did..."')
+        ani('"Do I?"')
+        ani('"You also take into account the random percentage that appeared"')
         ani("")
         return syncronisation
     else:
@@ -235,16 +240,17 @@ def info(syncronisation):
         syncronisation += 10
         ani(f"'Syncronisation is now at {syncronisation}%'")
         ani("")
-        ani2("what the f-")
+        ani2('"what the f-"')
         ani("")
+        return syncronisation
     ani("")
     clear_screen2()
 
 #info(syncronisation)
 
-def part1():
+def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
-    ani(f"You nod your head towards {name}")
+    ani(f'"You nod your head towards {name}"')
     ani("")
     ani("Time to get to work player!")
     ani("Each family has a different difficulty!")
@@ -265,10 +271,11 @@ def part1():
     ani("Now it's time to explore your starting point!")
     ani("<You look around and 3 things peak your interest...>")
     ani("A Closet (a), A Stuffed Toy (b), A Calendar (c)")
-    c1 = input("Which of the 3 will you explore?: ")
+    ani("Which of the 3 will you explore?: ")
+    c1 = input("")
     if c1.lower() == "a":
         ani("<You head towards the Closet>")
-        ani("<But when you reach it you freeze>")
+        ani("<But when you reach it? You freeze>")
         ani("<An all too familiar pin pad appears>")
         ani("<Your stomach lurches as you feel bile rise in your throat>")
         ani("<Memories flash before your eyes>")
@@ -279,16 +286,99 @@ def part1():
         clear_screen2()
         ani("Wow! You found a pinpad!")
         ani("Which numbers will you press?: ")
-        input("")
+        pin = int(input(""))
+        if pin == 3684:
+            ani("The Closet door opens")
+            ani("Behind the doors lies a computer")
+            ani("It is chained to the table, and seems to be struggling against its restraints")
+            ani("Release the computer? Y/N")
+            comp = input("")
+            if comp.lower() == "y":
+                ani("<You walk towards the computer not knowing what is is>")
+                ani("<Do you?>")
+                ani('"You shake your head towards the NPC"')
+                ani("<not a npc but whatever>")
+                ani("<With just a touch the chains crumble away...>")
+                ani('"..."')
+                ani("Thank you...")
+                ani("I'm sorry for ☹︎⚐︎💧︎✋︎☠︎☝︎ 👍︎⚐︎☠︎❄︎☼︎⚐︎☹︎")
+                rc = True
+                ani('"The computer disapears just as fast as it appears..."')
+                ani('"For you are no longer in the closet"')
+                ani("<You are back in the cot?>")
+                ani("<Everythings locked out, we can only move on...>")
+                ani('"Weird, I didnt know teleportation was possible in this sort of game"')
+                ani('"You make sure to not say that allowed, fearing you will incur <their> wrath"')
+                return rc
+            else:
+                ani("<You turn away from the computer>")
+                ani("<I've never seen it before>")
+                ani("<...>")
+                ani("<Best not risk it>")
+                ani('"As you walk out of the closet, you look back once, only to be horrified"')
+                ani("'Thanks for the help :)'")
+                syncronisation += 10
+                return syncronisation
+        else:
+            ani("<Dumba$$, can't even remember the old code from last time>")
+            ani("<Can't even remember when you killed Mitch>")
+            ani('"..."')
+            ani("<It was 3684, btw>")
+            ani("<And no, we can't go back>")
+            ani('"You look down shamefully"')
+            ani("<Let's just get moving>")
+            syncronisation += 3
+            ani(f"'Syncronisation is now at {syncronisation}%'")
+            ani(" ")
+            return syncronisation
     elif c1.lower() == "b":
-        ani("bleh")
+        ani("<You stare at the stuffed doll>")
+        ani('"You realise that they look just like the ones we murdered last time"')
+        ani("<...part of my deal, a part of my past>")
+        ani('"..."')
+        ani("<The only gift my parents left me>")
+        ani("<Ha! Funny ain't it?>")
+        ani("<To think it was used to kill the parents that actually cared>")
+        ani('"You remain silent"')
+        ani("<Let's just go...>")
+        syncronisation += 1
+        ani(f"'Syncronisation is now at {syncronisation}%'")
+        ani("")
+        return syncronisation
     elif c1.lower() == "c":
-        ani("bleh")
-    elif c1.lower() == "d":
-        ani("bleh")    
+        ani("<You walk towards the calendar>")
+        ani("Look at the date? Y/N: ")
+        calendar = input("")
+        if calendar.lower() == "y":
+            ani("The date is 13/03/1987")
+            ani("<My birthday...>")
+            ani("<3 years before the incident>")
+            ani("<28 since you came into my life>")
+            ani("<It's also the day I got adopted>")
+            ani('"..."')
+        else:
+            ani("<Why come here if you're not even gonna look at the date???>")
+            ani("<Waste of my time...>")
+            syncronisation += 5
+            ani(f"'Syncronisation is now at {syncronisation}%'")
+            return syncronisation
     else:
-        ani("bleh")
-part1()
+        ani("<You really are useless, we need as much information as possible!>")
+        ani('"But youve already made youre choice..."')
+    clear_screen2()
+    ani('"You process everything that happened..."')
+    ani('"Process what you have and havent learnt"')
+    ani("<Are you still thinking?>")
+    ani("<We don't have all day>")
+    ani("<Let's move it>")
+    ani('"While sighing and muttering under your breath you tell the character ok"')
+    ani("Congratulations! You've finished the tutorial!")
+    ani("Now, time to meet the families!")
+
+part1(rc, syncronisation)
+clear_screen2()
+
+
 
 
 

@@ -69,3 +69,6 @@
 #ani("Hi: ")
 #name = input()
 #print(name)
+
+#TEST 4
+print('"hi"')
