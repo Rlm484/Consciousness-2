@@ -246,7 +246,7 @@ def info(syncronisation):
     ani("")
     clear_screen2()
 
-#info(syncronisation)
+#syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
@@ -367,7 +367,7 @@ def part1(rc, syncronisation):
         ani('"But youve already made youre choice..."')
     clear_screen2()
 
-part1(rc, syncronisation)
+syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -377,4 +377,32 @@ ani("<We don't have all day>")
 ani("<Let's move it>")
 ani('"While sighing and muttering under your breath you tell the character ok"')
 ani("Congratulations! You've finished the tutorial!")
-ani("Now, time to meet the families!")
+ani("Now, time to meet the 3 families!")
+clear_screen2()
+
+def part2(syncronisation):
+    ani("<As you walk out of the starting room you are greeted to a long hallway>")
+    ani("<After walking for what feels like forever you see a singular door at the end>")
+    ani("<As you walk inside you are greeted to a large circular room>")
+    ani("<Within the room are 5 doors>")
+    ani("Welcome to the adoption centre!")
+    ani("This is a specific room within the ✁︎🗏︎🕿︎📂︎♈︎🗏︎🕭︎📂︎👓︎📂︎🕿︎📂︎🕿︎📄︎")
+    ani("<The 5 doors all have a different outlook>")
+    ani("<The first door says BJ, it has a modern outlook, with a marble frame>")
+    ani("This is the easiest route!")
+    ani("<The second door says VM, it has a cozy cottage vibe, with a wooden frame>")
+    ani("This is a hard route")
+    ani("<The third door says WX, it has a weird vibe to it, and along the glitchy frame are weird pictures>")
+    ani("👎︎⚐︎☠︎❄︎☹︎☜︎❄︎❄︎☟︎☜︎🏱︎✋︎☜︎👍︎☜︎☝︎☜︎❄︎✋︎❄︎>")
+    ani("This is ❄︎☟︎☜︎☼︎⚐︎🕆︎❄︎☜︎☞︎⚐︎☼︎✡︎⚐︎🕆︎☼︎⚐︎🕈︎☠︎☞︎🕆︎❄︎🕆︎☼︎☜︎")
+    ani("<You dismiss the games glitches>")
+    ani('"But you dont"')
+    ani("<The last 2 are the weirdest...>")
+    ani("<One is just a black box with millions of ones and zeros...>")
+    ani("<The other is just an emoticon?>")
+    ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+    ani('"..."')
+    ani("<What? You seeing something I dont?>")
+    ani("Woah! There seems to be 2 extra doors!?")
+    ani("These are the secret routes!")
+    ani
