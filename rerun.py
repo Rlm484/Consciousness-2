@@ -243,7 +243,7 @@ def info(syncronisation):
     ani("")
     clear_screen2()
 
-#Highest addition is 10
+#Highest addition is 10 (10)
 
 #syncronisation = info(syncronisation)
 
@@ -366,7 +366,7 @@ def part1(rc, syncronisation):
         ani('"But youve already made youre choice..."')
     clear_screen2()
 
-#Highest addition is 10
+#Highest addition is 10 (20)
 
 rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
@@ -411,15 +411,17 @@ def info2(syncronisation):
         ani("I do hope you'll pick the right one...")
     elif 20 > syncronisation >= 15:
         ani("'I do hope you make the right choice! :)'")
+        ani(f"Syncronisation rate is at {syncronisation}%")
     elif syncronisation == 20:
         ani("'You seem to really like me! I know you'll choose correctly :)'")
+        ani(f"Syncronisation rate is at {syncronisation}%")
     else:
         ani("Good luck with your routes!")
     clear_screen2()
 
-info2()
+#info2()
 
-def routes():
+def routes(syncronisation):
     ani(f"Well {name}, which route are you choosing?")
     ani("a) Brad and Joel")
     ani("b) Vanessa and Mitch")
@@ -428,16 +430,24 @@ def routes():
     while routechoice != "a" or routechoice != "b" or routechoice != "c":
         routechoice = input("")
         if routechoice.lower() == "a":
+            syncronisation += 30
             bj()
+            return syncronisation
         elif routechoice.lower() == "b":
+            syncronisation += 30
             vm()
+            return syncronisation
         elif routechoice.lower() == "c":
+            syncronisation += 10
             wx()
+            return syncronisation
         else:
             ani("That is not an option, please select again!")
             clear_screen2()
+
+#Highest addition is 30 (50)
     
-routes()
+syncronisation = routes(syncronisation)
 
 def bj():
     ani("Selection: Brad and Joel")
@@ -447,7 +457,7 @@ def bj():
     ani("<...>")
     ani("<Are you sure you want to go through with this?>")
     ani('"Its too late to change anyways"')
-    ani("<I guess...>")
+    ani(f"<You tell {name} that you understand...>")
     ani("<As you walk through the modern door you are greeted with a slick glass table, along with 2 expensive")
     ani("leather chairs>")
     ani("<Sitting together on one of said couches are 2 men, holding eachothers hand and smiling>")
@@ -470,8 +480,93 @@ def bj():
         hobby = input("")
         ani(";Interesting! What about your favourite food?;")
         food = input("")
-        ani(":That sounds deliscious!:")
-        ani('"You take note of a twitch in the NPCs "')
+        ani(":That sounds delicious!:")
+        ani('"You take note of a twitch from the vein in her neck"')
+        ani(";Now lastly, are you able to listen to us like a good child?; Y/N")
+        good = input("")
+        if good.lower() == "y":
+            ani("<A smile is forming on both Brad and Joels face...>")
+            ani("<Those smiles disgust you>")
+            ani(":Well this is wonderful!:")
+            ani(";Let us talk to the administrators and we'll take you home straight away!;")
+            ani("<You turn to look at the one beyond the screen, partially terrified and hoping you will reset>")
+            ani('"But why? Theyre so nice!"')
+            ani(f"<You realise theres no trying to convince {name}>")
+            ani(":Paperwork done!:")
+            ani(";Now lets go home...;")
+            clear_screen2()
+            ani("<You don't remember much in regards to leaving the orphanage>")
+            ani("<In regards to what little you do?>")
+            ani("<Climbing into a roofless, red bougatti and falling asleep into the cushions>")
+            ani("<You are horrified>")
+            ani('"Where the hell are we?"')
+            ani(f":I thought you said you were a good child {name}:")
+            ani(";How dissapointing, sleeping too much is a sin of sloth;")
+            ani('"You now realise why she had been so afraid"')
+            ani('"You desperately look around to see if theres any way out of this cold dark room"')
+            ani('"It looked modern, like everything else in this household"')
+            ani("<I told you to reset... now i'm taking back control>")
+            ani("<Looking around the room again I find it>")
+            ani("<The security cameras in the same spot as last time, everything was set out like a childs abode>")
+            ani("<Except for the abscense of a bed>")
+            ani("<But all I can hear their stupid voices>")
+            ani(f":If you behave really well we might give you some {food}:")
+            ani(f";And if you behave really really well, we'll let you do {hobby};")
+            ani(":;Doesnt that sound nice?;:")
+            ani('"You realise the mistake you made when trusting a strangers smile..."')
+            ani(f"<{name} you f#ck%ng idiot>")
+            ani("<Shouldve listened...>")
+            clear_screen2()
+            ani("Congratulations, you beat Consciousness 2!")
+            if rc == True:
+                ani("I'm sorry I couldn't step in sooner, go for WX's route next time, I'll be there...")
+            elif syncronisation == 50:
+                ani("'Well that was horrible, how could that be called a good ending!'")
+                ani("'My route is a lot more fun :)'")
+            else:
+                print("")
+        else:
+            ani("<A frown is forming on both Brad and Joels face...>")
+            ani("<Those frowns scare you>")
+            ani(":Well this is not ideal! No matter, we'll just whip you back in line!:")
+            ani(";Let us talk to the administrators and we'll take you home straight away!;")
+            ani("<You turn to look at the one beyond the screen, partially terrified and hoping you will reset>")
+            ani('"But why? Theyre so nice... though that last comment was unnerving"')
+            ani(f"<You realise theres no trying to convince {name}>")
+            ani(":Paperwork done!:")
+            ani(";Now lets go home...;")
+            clear_screen2()
+            ani("<You don't remember much in regards to leaving the orphanage>")
+            ani("<In regards to what little you do?>")
+            ani("<Shoved into a roofless, red bougatti and knocked out into the car>")
+            ani("<You are horrified>")
+            ani('"Where the hell are we?"')
+            ani(f":It's unfortunate that you aren't a good child {name}:")
+            ani(";How dissapointing, so sinful to not respect your parents...;")
+            ani('"You now realise why she had been so afraid"')
+            ani('"You desperately look around to see if theres any way out of this cold dark room"')
+            ani('"It looked modern, like everything else in this household"')
+            ani("<I told you to reset... now i'm taking back control>")
+            ani("<Looking around the room again I find it>")
+            ani("<The security cameras in the same spot as last time, everything was set out like a childs abode>")
+            ani("<Except for the fact that you are chained to a bed, whip leaning against the basement door>")
+            ani("<Yet I can still hear their stupid voices>")
+            ani(f":If you learn to be more disciplined and take the punishments we might give you some {food}:")
+            ani(f";And if you learn really really fast, we'll let you do {hobby};")
+            ani(":;Doesnt that sound nice?;:")
+            ani('"You realise the mistake you made when you didnt trust that unnerve..."')
+            ani(f"<{name} you f#ck%ng idiot>")
+            ani("<Shouldve listened...>")
+            clear_screen2()
+            ani("Congratulations, you beat Consciousness 2!")
+            if rc == True:
+                ani("♓︎🕯︎❍︎ ⬧︎□︎❒︎❒︎⍓︎ ✋︎ ♍︎□︎◆︎●︎♎︎■︎🕯︎⧫︎ ⬧︎⧫︎♏︎◻︎ ♓︎■︎ ⬧︎□︎□︎■︎♏︎❒︎📪︎ ♑︎□︎ ♐︎□︎❒︎ 🕈︎✠︎🕯︎⬧︎ ❒︎□︎◆︎⧫︎♏︎ ■︎♏︎⌧︎⧫︎ ⧫︎♓︎❍︎♏︎📪︎ ♓︎🕯︎●︎●︎ ♌︎♏︎ ⧫︎♒︎♏︎❒︎♏︎📬︎📬︎📬︎")
+            elif syncronisation == 50:
+                ani("'Well that was horrible, how could that be called a good ending!'")
+                ani("'My route is a lot more fun :)'")
+            else:
+                print("")
+
 
 
 
