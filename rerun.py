@@ -15,9 +15,9 @@ def clear_screen2():
 print("WARNING, SWEARING AND COARSE LANGUAGE")
 clear_screen2()
 syncronisation = 0
-wx = 0
-vm = 0
-bj = 0
+wxr = 0
+vmr = 0
+bjr = 0
 inv = 0
 rc = 0
 
@@ -246,6 +246,8 @@ def info(syncronisation):
     ani("")
     clear_screen2()
 
+#Highest addition is 10
+
 #syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
@@ -309,7 +311,7 @@ def part1(rc, syncronisation):
                 ani("<Everythings locked out, we can only move on...>")
                 ani('"Weird, I didnt know teleportation was possible in this sort of game"')
                 ani('"You make sure to not say that allowed, fearing you will incur <their> wrath"')
-                return rc
+                return rc, syncronisation
             else:
                 ani("<You turn away from the computer>")
                 ani("<I've never seen it before>")
@@ -318,7 +320,7 @@ def part1(rc, syncronisation):
                 ani('"As you walk out of the closet, you look back once, only to be horrified"')
                 ani("'Thanks for the help :)'")
                 syncronisation += 10
-                return syncronisation
+                return rc, syncronisation
         else:
             ani("<Dumba$$, can't even remember the old code from last time>")
             ani("<Can't even remember when you killed Mitch>")
@@ -330,7 +332,7 @@ def part1(rc, syncronisation):
             syncronisation += 3
             ani(f"'Syncronisation is now at {syncronisation}%'")
             ani(" ")
-            return syncronisation
+            return rc, syncronisation
     elif c1.lower() == "b":
         ani("<You stare at the stuffed doll>")
         ani('"You realise that they look just like the ones we murdered last time"')
@@ -344,7 +346,7 @@ def part1(rc, syncronisation):
         syncronisation += 1
         ani(f"'Syncronisation is now at {syncronisation}%'")
         ani("")
-        return syncronisation
+        return rc, syncronisation
     elif c1.lower() == "c":
         ani("<You walk towards the calendar>")
         ani("Look at the date? Y/N: ")
@@ -361,13 +363,15 @@ def part1(rc, syncronisation):
             ani("<Waste of my time...>")
             syncronisation += 5
             ani(f"'Syncronisation is now at {syncronisation}%'")
-            return syncronisation
+            return rc, syncronisation
     else:
         ani("<You really are useless, we need as much information as possible!>")
         ani('"But youve already made youre choice..."')
     clear_screen2()
 
-syncronisation = part1(rc, syncronisation)
+#Highest addition is 10
+
+rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -380,7 +384,7 @@ ani("Congratulations! You've finished the tutorial!")
 ani("Now, time to meet the 3 families!")
 clear_screen2()
 
-def part2(syncronisation):
+def info2(syncronisation):
     ani("<As you walk out of the starting room you are greeted to a long hallway>")
     ani("<After walking for what feels like forever you see a singular door at the end>")
     ani("<As you walk inside you are greeted to a large circular room>")
@@ -405,4 +409,45 @@ def part2(syncronisation):
     ani("<What? You seeing something I dont?>")
     ani("Woah! There seems to be 2 extra doors!?")
     ani("These are the secret routes!")
-    ani
+    ani("In order to access these routes you need to meet certain requirements")
+    if rc == True:
+        ani("I do hope you'll pick the right one...")
+    elif 20 > syncronisation >= 15:
+        ani("'I do hope you make the right choice! :)'")
+    elif syncronisation == 20:
+        ani("'You seem to really like me! I know you'll choose correctly :)'")
+    else:
+        ani("Good luck with your routes!")
+    clear_screen2()
+
+info2()
+
+def routes():
+    ani(f"Well {name}, which route are you choosing?")
+    ani("a) Brad and Joel")
+    ani("b) Vanessa and Mitch")
+    ani("c) Wei Xian")
+    routechoice = 0
+    while routechoice != "a" or routechoice != "b" or routechoice != "c":
+        routechoice = input("")
+        if routechoice == "a":
+            bj()
+        elif routechoice == "b":
+            vm()
+        elif routechoice == "c":
+            wx()
+        else:
+            ani("That is not an option, please select again!")
+            clear_screen2()
+    
+def bj():
+    ani("Selection: Brad and Joel")
+    ani("Difficulty: Easy")
+
+def vm():
+    ani("Selection: Vanessa and Mitch")
+    ani("Difficulty: Hard")
+
+def wx():
+    ani("Selection: Wei Xian")
+    ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
