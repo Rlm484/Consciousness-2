@@ -12,12 +12,9 @@ def clear_screen2():
         os.system('clear')
 #Normal clear
 
-print("WARNING, SWEARING AND COARSE LANGUAGE")
+print("WARNING, SWEARING, CHILD ABUSE, NEGLECT, SUICIDE AND COARSE LANGUAGE")
 clear_screen2()
 syncronisation = 0
-wxr = 0
-vmr = 0
-bjr = 0
 inv = 0
 rc = 0
 
@@ -254,7 +251,7 @@ def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
     ani(f'"You nod your head towards {name}"')
     ani("")
-    ani("Time to get to work player!")
+    ani(f"Time to get to work {name}!")
     ani("Each family has a different difficulty!")
     ani("Brad and Joel - Easy")
     ani("Vanessa and Mitch - Hard")
@@ -310,7 +307,7 @@ def part1(rc, syncronisation):
                 ani("<You are back in the cot?>")
                 ani("<Everythings locked out, we can only move on...>")
                 ani('"Weird, I didnt know teleportation was possible in this sort of game"')
-                ani('"You make sure to not say that allowed, fearing you will incur <their> wrath"')
+                ani('"You make sure to not say that aloud, fearing you will incur <their> wrath"')
                 return rc, syncronisation
             else:
                 ani("<You turn away from the computer>")
@@ -430,19 +427,53 @@ def routes():
     routechoice = 0
     while routechoice != "a" or routechoice != "b" or routechoice != "c":
         routechoice = input("")
-        if routechoice == "a":
+        if routechoice.lower() == "a":
             bj()
-        elif routechoice == "b":
+        elif routechoice.lower() == "b":
             vm()
-        elif routechoice == "c":
+        elif routechoice.lower() == "c":
             wx()
         else:
             ani("That is not an option, please select again!")
             clear_screen2()
     
+routes()
+
 def bj():
     ani("Selection: Brad and Joel")
     ani("Difficulty: Easy")
+    clear_screen2()
+    ani("<You walk towards the marble door, pausing as you stand in front>")
+    ani("<...>")
+    ani("<Are you sure you want to go through with this?>")
+    ani('"Its too late to change anyways"')
+    ani("<I guess...>")
+    ani("<As you walk through the modern door you are greeted with a slick glass table, along with 2 expensive")
+    ani("leather chairs>")
+    ani("<Sitting together on one of said couches are 2 men, holding eachothers hand and smiling>")
+    ani(f":Hello {name}! The administrators told us so much about you!:")
+    ani("<You stare at them, suddenly feeling a shiver down your spine>")
+    ani('"You wish to question this reaction until Brad cuts off your train of thought"')
+    ani(";Even though we did hear some things, there are still things we want to ask you personally;")
+    ani(":But before that, how about you take a seat?:")
+    ani("Sit down? Y/N")
+    sofa = input("")
+    if sofa.lower() == "y":
+        ani(f"<You sit down, happy {name} made this choice>")
+        ani("<After all... you're not in control>")
+        ani("<And when you are? You are permitted to speak in first person>")
+        ani('"You now realise that this is not just a character"')
+        ani('"But something else entirely"')
+        clear_screen2()
+        ani(";Let's get start then!;")
+        ani(":Question 1, what are your hobbies?:")
+        hobby = input("")
+        ani(";Interesting! What about your favourite food?;")
+        food = input("")
+        ani(":That sounds deliscious!:")
+        ani('"You take note of a twitch in the NPCs "')
+
+
 
 def vm():
     ani("Selection: Vanessa and Mitch")
