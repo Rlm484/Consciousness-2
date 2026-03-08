@@ -12,7 +12,7 @@ def clear_screen2():
         os.system('clear')
 #Normal clear
 
-print("WARNING, SWEARING, CHILD ABUSE, NEGLECT, SUICIDE AND COARSE LANGUAGE")
+print("WARNING, SWEARING, CHILD ABUSE, EMOTIONAL ABUSE, NEGLECT, SUICIDE AND COARSE LANGUAGE")
 clear_screen2()
 syncronisation = 0
 inv = 0
@@ -285,8 +285,8 @@ def part1(rc, syncronisation):
         clear_screen2()
         ani("Wow! You found a pinpad!")
         ani("Which numbers will you press?: ")
-        pin = int(input(""))
-        if pin == 3684:
+        pin = input("")
+        if pin == "3684":
             ani("The Closet door opens")
             ani("Behind the doors lies a computer")
             ani("It is chained to the table, and seems to be struggling against its restraints")
@@ -368,7 +368,7 @@ def part1(rc, syncronisation):
 
 #Highest addition is 10 (20)
 
-rc, syncronisation = part1(rc, syncronisation)
+#rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -420,34 +420,6 @@ def info2(syncronisation):
     clear_screen2()
 
 #info2()
-
-def routes(syncronisation):
-    ani(f"Well {name}, which route are you choosing?")
-    ani("a) Brad and Joel")
-    ani("b) Vanessa and Mitch")
-    ani("c) Wei Xian")
-    routechoice = 0
-    while routechoice != "a" or routechoice != "b" or routechoice != "c":
-        routechoice = input("")
-        if routechoice.lower() == "a":
-            syncronisation += 30
-            bj()
-            return syncronisation
-        elif routechoice.lower() == "b":
-            syncronisation += 30
-            vm()
-            return syncronisation
-        elif routechoice.lower() == "c":
-            syncronisation += 10
-            wx()
-            return syncronisation
-        else:
-            ani("That is not an option, please select again!")
-            clear_screen2()
-
-#Highest addition is 30 (50)
-    
-syncronisation = routes(syncronisation)
 
 def bj():
     ani("Selection: Brad and Joel")
@@ -567,13 +539,170 @@ def bj():
             else:
                 print("")
 
-
-
-
 def vm():
     ani("Selection: Vanessa and Mitch")
     ani("Difficulty: Hard")
+    ani("Note that in hard mode you cannot redo a question, if you write an illegitimite answer you WILL have to restart")
+    clear_screen2()
+    ani("<You walk towards the wooden door, pausing as you stand in front>")
+    ani("<How long had it been since you had seen them? 9 months?>")
+    ani("<You push down the unsettling feeling in your stomach>")
+    ani("<As you open the door you freeze momentarily>")
+    ani("<The parents you chose all those years ago>")
+    ani("<However you don't feel joy, but an overwhelming sense of dread>")
+    ani("<For what you see aren't people>")
+    ani("<But dolls>")
+    ani('"Maybe I should give her a break for this route..."')
+    clear_screen2()
+    ani("<The room is filled with simple, humble decor>")
+    ani("<The cottage like abode is filled with greenery, along with 3 stools, and a small table>") 
+    ani("<It reminds you of the shed...>")
+    ani("<Of the dog...>")
+    ani("<Of Ben>")
+    ani("|Are you okay dear? You seem unwell|")
+    ani("<You nod your head and offer a slight nod to the female doll>")
+    ani(f"<You also take note of {name}'s quiteness>")
+    ani("<You are grateful for their respect>")
+    ani('"You smile in response"')
+    ani("-Are you sure? You seem awfully pale-")
+    ani("<You once again tell the 2 dolls that you are okay, and that they should start the interview>")
+    ani("|If you say so, but do know that none of these questions are of no means meant to pressure you|")
+    ani("-All we want to do is ask some questions for your own comfort!-")
+    ani("|Question 1) Are you allergic to dogs?| Y/N")
+    dog = input("")
+    if dog.lower() == "y":
+        ani("|Oh...|")
+        ani("-Hey, Ness, we could get rid of-")
+        ani("|NO, HOW COULD YOU EVEN THINK THAT|")
+        ani("-No, no, nevermind-")
+        ani("|I'm sorry sweetheart but I don't think this will work out|")
+        ani("-We do hope you'll find a good home...-")
+        ani(f"|Good luck {name}|")
+        ani("|I'm sorry that good home can't be us|")
+        ani("|But we can't abandon Ben, Corey would cry|")
+        ani("-Goodbye-")
+        ani("<You arent even made at the one beyond the screen, cause it isn't even Ben that theyre worried about>")
+        clear_screen2()
+        ani("You failed! Better luck next time...")
+        ani("'But know that no one has use for a useless player, not even Them'")
+    elif dog.lower() == "n":
+        ani("|Thats wonderful!|")
+        ani("-It sure is!-")
+        ani("|What about little brothers?|")
+        ani("|Nah, I dont need to ask you right Mitch?|")
+        ani("-Absolutly! Who wouldn't love Corey?-")
+        ani("<...>")
+        ani("|Anyways, where do you like going for fun? (Use 'the' before the place for grammatical sense later, you have been warned)|")
+        place = input("")
+        ani("-That sounds wonderful!-")
+        ani("|What about your favorite food?|")
+        food = input("")
+        ani("-Yummy!-")
+        ani("|Sounds delicious|")
+        ani("|Well that's all in regards to the interview|")
+        ani(f"-Let's go home {name}-")
+        clear_screen2()
+        ani("<After Mom and Dad take me to the car I am greeted to a familiar vehicle>")
+        ani("<A 7 seat, second-hand, blue hyundai>")
+        ani("<Coreys favourite colour>")
+        ani("<While you hop into the car, 2 dolls smile back at you from the front seats>")
+        ani("|Well then, let's go home|")
+        ani('"Though you want to ask who Corey is, you decide to remain silent, for you want to learn more about the event before the first game"')
+        clear_screen2()
+        ani("<When you arrive at your new home, you take in the nostalgic sight>")
+        ani("|Well come on in!|")
+        ani("<As you walk inside a massive golden furry doll tackles you to the ground, drooling all over you>")
+        ani("-Aww Benny, get off of them!-")
+        ani("<You are delighted to see your old friend (albeit doll form), the only one who listened all those years ago...>")
+        ani("<You chuckle at the dolls slobbery kisses, though you wonder where the slobber comes from>")
+        ani("<However your thoughts are cut off when you spot a smaller doll within the corner of your eyes>")
+        ani("~Mommy? Whos this?~")
+        ani("|Your brand new sister!|")
+        ani("~Really? Thats awesome!~")
+        ani(f"|Yep, say hi to {name}|")
+        ani(f"~Hi {name}!~")
+        ani("~Wanna play?~ Y/N")
+        c1 = input("")
+        if c1.lower() == "y":
+            ani("|Such a good big sister!|")
+            ani("-We chose such an amazing daughter-")
+            ani("~Lets go sis!~")
+            clear_screen2()
+            ani('"Just like that 2 months go by..."')
+            ani("<Hey Mom?>")
+            ani("|Yes dear?|")
+            ani(f"<We havent gone to {place} in a while...>")
+            ani(f'"You are surprised that she enjoys going to {place} like you do"')
+            ani("|Yes?|")
+            ani("<Could we go in the afternoon? You said we could go last weekend but we ended up going to Coreys thing...>")
+            ani("<As a doll walks into the room he answers for her>")
+            ani('"Though you understand that the dolls are her original family, you wonder how she doesnt feel unnerved..."')
+            ani("-Sorry princess, but Corey wants to go to his friends Josephs house today-")
+            ani("<It's ok I understand...>")
+            syncronisation += 15
+            ani(f"Syncronisation rate is at {syncronisation}%")
+            clear_screen2()
+            ani('"Another 4 months go by, and you arre question her sanity"')
+            ani('"You also recount the past events that led to them crying in the bathroom, hugging her legs"')
+            ani('"The neglect, the forgottence of her birthday, the prioritisation of Coreys feelings"')
+            ani('"You are so lost in thought that you dont see her get up"')
+            ani2('"Dont see her stop crying"')
+            ani2('"Dont see her head to the cabnits"')
+            ani2('"Dont see her unscrew those child-proof caps"')
+            ani2('"You dont see her make the same choices as she had 2 years ago, albeit after 6 months instead of 6 years"')
+            ani2('"Dont realise that she made that deal 9 months ago out of revenge, not longing"')
+            ani2('"You dont realise anything until you snap out of your trance"')
+            ani2('"Dont realise until you look up and see a the swallowing motion"')
+            ani('"And so just as quickly as the game begins, the game ends"')
+            ani('"With a singular tear running down their cheek..."')
+            clear_screen2()
+            ani("Congratulations, you beat Consciousness 2!")
+            if rc == True:
+                ani("♓︎ ♋︎❍︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ♓︎ ♋︎❍︎ ⬧︎□︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ⍓︎□︎◆︎ ⬥︎♏︎❒︎♏︎ ❍︎♏︎♋︎■︎⧫︎ ⧫︎□︎ ♑︎□︎ ♎︎□︎⬥︎■︎ ❍︎⍓︎ ❒︎□︎◆︎⧫︎♏︎📬︎📬︎📬︎ ♓︎🕯︎❍︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎")
+            elif syncronisation == 50:
+                ani("'Well that was entertaining! But how could that be called a good ending?'")
+                ani("'How about trying my route, its a lot more fun :)'")
+            else:
+                print("")
+
+
+    else:
+        ani("ILLEGITIMATE ANSWER")
+        clear_screen2()
+        ani("Unfortunately that was an illegitimate answer!")
+        ani("You failed! Better luck next time...")
+        ani("'But know that no one has use for a useless player, not even Them'")
+
+#Highest addition is 15(65)
 
 def wx():
     ani("Selection: Wei Xian")
     ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
+
+def routes(syncronisation):
+    ani(f"Well {name}, which route are you choosing?")
+    ani("a) Brad and Joel")
+    ani("b) Vanessa and Mitch")
+    ani("c) Wei Xian")
+    routechoice = 0
+    while routechoice != "a" or routechoice != "b" or routechoice != "c":
+        routechoice = input("")
+        if routechoice.lower() == "a":
+            syncronisation += 30
+            bj()
+            return syncronisation
+        elif routechoice.lower() == "b":
+            syncronisation += 30
+            vm()
+            return syncronisation
+        elif routechoice.lower() == "c":
+            syncronisation += 10
+            wx()
+            return syncronisation
+        else:
+            ani("That is not an option, please select again!")
+            clear_screen2()
+
+syncronisation = routes(syncronisation)
+#Highest addition is 30 (50)
+    
