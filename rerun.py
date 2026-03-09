@@ -797,15 +797,15 @@ def routes(syncronisation, bjs, vms, wxs):
         if routechoice.lower() == "a":
             syncronisation += 30
             syncronisation, bjs, vms, wxs = bj(syncronisation, bjs, vms, wxs)
-            return syncronisation
+            return syncronisation, bjs, vms, wxs
         elif routechoice.lower() == "b":
             syncronisation += 30
             syncronisation, bjs, vms, wxs = vm(syncronisation, bjs, vms, wxs)
-            return syncronisation
+            return syncronisation, bjs, vms, wxs
         elif routechoice.lower() == "c":
             syncronisation += 10
             wx()
-            return syncronisation
+            return syncronisation, bjs, vms, wxs
         else:
             ani("That is not an option, please select again!")
             clear_screen2()
