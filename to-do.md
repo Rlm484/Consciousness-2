@@ -65,4 +65,7 @@ Vessel Connections:
 [] = The firewall
 '' = Soul piece
    = Game or Me
+:: = Joel
+;; = Mitch
+@@ = Danger
    

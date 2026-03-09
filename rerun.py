@@ -174,7 +174,7 @@ while name.lower() == "kate":
     input("")
     clear_screen()
 
-ani(f"{name}?")
+ani(f"Welcome {name}")
 
 def introductions():
     ani("<You nod, it just makes your head feel fuzzier if you try to think of your actual name>")
@@ -376,7 +376,7 @@ ani('"Process what you have and havent learnt"')
 ani("<Are you still thinking?>")
 ani("<We don't have all day>")
 ani("<Let's move it>")
-ani('"While sighing and muttering under your breath you tell the character ok"')
+ani('"While sighing and muttering under your breath you respond with an ok"')
 ani("Congratulations! You've finished the tutorial!")
 ani("Now, time to meet the 3 families!")
 clear_screen2()
@@ -539,7 +539,7 @@ def bj():
             else:
                 print("")
 
-def vm():
+def vm(syncronisation):
     ani("Selection: Vanessa and Mitch")
     ani("Difficulty: Hard")
     ani("Note that in hard mode you cannot redo a question, if you write an illegitimite answer you WILL have to restart")
@@ -551,16 +551,16 @@ def vm():
     ani("<The parents you chose all those years ago>")
     ani("<However you don't feel joy, but an overwhelming sense of dread>")
     ani("<For what you see aren't people>")
-    ani("<But dolls>")
+    ani2("<But dolls>")
     ani('"Maybe I should give her a break for this route..."')
     clear_screen2()
     ani("<The room is filled with simple, humble decor>")
-    ani("<The cottage like abode is filled with greenery, along with 3 stools, and a small table>") 
+    ani("<It is filled with greenery, along with 3 stools, and a small table>") 
     ani("<It reminds you of the shed...>")
     ani("<Of the dog...>")
     ani("<Of Ben>")
     ani("|Are you okay dear? You seem unwell|")
-    ani("<You nod your head and offer a slight nod to the female doll>")
+    ani("<You offer a slight nod to the female doll>")
     ani(f"<You also take note of {name}'s quiteness>")
     ani("<You are grateful for their respect>")
     ani('"You smile in response"')
@@ -589,10 +589,10 @@ def vm():
         ani("|Thats wonderful!|")
         ani("-It sure is!-")
         ani("|What about little brothers?|")
-        ani("|Nah, I dont need to ask you right Mitch?|")
+        ani("|Actually nevermind, no need to ask, right Mitch?|")
         ani("-Absolutly! Who wouldn't love Corey?-")
         ani("<...>")
-        ani("|Anyways, where do you like going for fun? (Use 'the' before the place for grammatical sense later, you have been warned)|")
+        ani("|Anyways, where do you like going for fun?| (Use 'the' before the place for grammatical sense later, you have been warned)")
         place = input("")
         ani("-That sounds wonderful!-")
         ani("|What about your favorite food?|")
@@ -607,7 +607,8 @@ def vm():
         ani("<Coreys favourite colour>")
         ani("<While you hop into the car, 2 dolls smile back at you from the front seats>")
         ani("|Well then, let's go home|")
-        ani('"Though you want to ask who Corey is, you decide to remain silent, for you want to learn more about the event before the first game"')
+        ani('"Though you want to ask who Corey is, you decide to remain silent, for you want to learn more about the events') 
+        ani('before the first game"')
         clear_screen2()
         ani("<When you arrive at your new home, you take in the nostalgic sight>")
         ani("|Well come on in!|")
@@ -637,12 +638,12 @@ def vm():
             ani("<Could we go in the afternoon? You said we could go last weekend but we ended up going to Coreys thing...>")
             ani("<As a doll walks into the room he answers for her>")
             ani('"Though you understand that the dolls are her original family, you wonder how she doesnt feel unnerved..."')
-            ani("-Sorry princess, but Corey wants to go to his friends Josephs house today-")
+            ani("-Sorry princess, but Corey wants to go to his friend Josephs house today-")
             ani("<It's ok I understand...>")
             syncronisation += 15
             ani(f"Syncronisation rate is at {syncronisation}%")
             clear_screen2()
-            ani('"Another 4 months go by, and you arre question her sanity"')
+            ani('"Another 4 months go by, and you are questioning her sanity"')
             ani('"You also recount the past events that led to them crying in the bathroom, hugging her legs"')
             ani('"The neglect, the forgottence of her birthday, the prioritisation of Coreys feelings"')
             ani('"You are so lost in thought that you dont see her get up"')
@@ -652,9 +653,9 @@ def vm():
             ani2('"You dont see her make the same choices as she had 2 years ago, albeit after 6 months instead of 6 years"')
             ani2('"Dont realise that she made that deal 9 months ago out of revenge, not longing"')
             ani2('"You dont realise anything until you snap out of your trance"')
-            ani2('"Dont realise until you look up and see a the swallowing motion"')
+            ani2('"Dont realise until you look up and see the swallowing motion"')
             ani('"And so just as quickly as the game begins, the game ends"')
-            ani('"With a singular tear running down their cheek..."')
+            ani('"With a singular tear running down their lain-down corpse..."')
             clear_screen2()
             ani("Congratulations, you beat Consciousness 2!")
             if rc == True:
@@ -664,8 +665,8 @@ def vm():
                 ani("'How about trying my route, its a lot more fun :)'")
             else:
                 print("")
-
-
+        elif c1.lower() == "n":
+            ani()
     else:
         ani("ILLEGITIMATE ANSWER")
         clear_screen2()
@@ -693,7 +694,7 @@ def routes(syncronisation):
             return syncronisation
         elif routechoice.lower() == "b":
             syncronisation += 30
-            vm()
+            vm(syncronisation)
             return syncronisation
         elif routechoice.lower() == "c":
             syncronisation += 10
