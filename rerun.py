@@ -131,7 +131,7 @@ def continuation():
     ani2("'You can run... but you can't hide'")
     clear_screen1()
 
-continuation()
+#continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -166,7 +166,7 @@ def intro():
     ani("I believe you'll make the right one...")
     clear_screen1()
 
-intro()
+#intro()
 
 ani("Welcome user! what's your name?: ")
 name = input("")
@@ -193,7 +193,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-introductions()
+#introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -248,7 +248,7 @@ def info(syncronisation):
 
 #Highest addition is 10 (10)
 
-syncronisation = info(syncronisation)
+#syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
@@ -373,7 +373,7 @@ def part1(rc, syncronisation):
 
 #Highest addition is 10 (20)
 
-rc, syncronisation = part1(rc, syncronisation)
+#rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -424,10 +424,10 @@ def info2(syncronisation):
         ani("Good luck with your routes!")
     clear_screen2()
 
-info2()
+#syncronisation = info2(syncronisation)
 
-def bj(bjs):
-    bjs = True
+def bj(syncronisation, bjs, vms, wxs):
+    bjs += 1
     ani("Selection: Brad and Joel")
     ani("Difficulty: Easy")
     clear_screen2()
@@ -506,7 +506,7 @@ def bj(bjs):
                 ani("'My route is a lot more fun :)'")
             else:
                 print("")
-            return bjs
+            return syncronisation, bjs, vms, wxs
         else:
             ani("<A frown is forming on both Brad and Joels face...>")
             ani("<Those frowns scare you>")
@@ -551,10 +551,25 @@ def bj(bjs):
                 ani("'My route is a lot more fun :)'")
             else:
                 print("")
-            return bjs
+            return syncronisation, bjs, vms, wxs
+    elif sofa == "n":
+        ani("<You stay standing, frozen in the same spot>")
+        ani(f"<Stupid {name}>")
+        ani(":Are you sure about this Brad?:")
+        ani(";I dont know anymore...;")
+        ani(";We could just shape her;")
+        ani(":No, we have no use for a child that is flawed and wont obey:")
+        ani(":Shes just a worthless b!tch:")
+        ani(" ")
+        clear_screen2()
+        ani("You failed! Better luck next time...")
+        ani("'But know that no one has use for a useless player, not even Them'")
+        bjs += 2
+        return syncronisation, bjs, vms, wxs
 
-def vm(vms, syncronisation):
-    vms = True
+
+def vm(syncronisation, bjs, vms, wxs):
+    vms += 1
     ani("Selection: Vanessa and Mitch")
     ani("Difficulty: Hard")
     ani("Note that in hard mode you cannot redo a question, if you write an illegitimite answer you WILL have to restart")
@@ -598,9 +613,10 @@ def vm(vms, syncronisation):
         ani("-Goodbye-")
         ani("<You arent even made at the one beyond the screen, cause it isn't even Ben that theyre worried about>")
         clear_screen2()
+        vms += 2
         ani("You failed! Better luck next time...")
         ani("'But know that no one has use for a useless player, not even Them'")
-        return vms, syncronisation
+        return syncronisation, bjs, vms, wxs
     elif dog.lower() == "n":
         ani("|Thats wonderful!|")
         ani("-It sure is!-")
@@ -685,7 +701,7 @@ def vm(vms, syncronisation):
                 ani("'How about trying my route, its a lot more fun :)'")
             else:
                 print("")
-            return vms, syncronisation
+            return syncronisation, bjs, vms, wxs
         elif c1.lower() == "n":
             ani("<Actually, I don't feel like>")
             ani("~WHAT~")
@@ -746,21 +762,23 @@ def vm(vms, syncronisation):
                 ani("'How about trying my route, its a lot more fun :)'")
             else:
                 print("")
-            return vms, syncronisation   
+            return syncronisation, bjs, vms, wxs
         else:
             ani("ILLEGITIMATE ANSWER")
             clear_screen2()
+            vms += 2
             ani("Unfortunately that was an illegitimate answer!")
             ani("You failed! Better luck next time...")
             ani("'But know that no one has use for a useless player, not even Them'")
-            return vms, syncronisation      
+            return syncronisation, bjs, vms, wxs     
     else:
         ani("ILLEGITIMATE ANSWER")
         clear_screen2()
+        vms += 2
         ani("Unfortunately that was an illegitimate answer!")
         ani("You failed! Better luck next time...")
         ani("'But know that no one has use for a useless player, not even Them'")
-        return vms, syncronisation
+        return syncronisation, bjs, vms, wxs
 
 #Highest addition is 25(75)
 
@@ -768,7 +786,7 @@ def wx():
     ani("Selection: Wei Xian")
     ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
 
-def routes(syncronisation):
+def routes(syncronisation, bjs, vms, wxs):
     ani(f"Well {name}, which route are you choosing?")
     ani("a) Brad and Joel")
     ani("b) Vanessa and Mitch")
@@ -778,11 +796,11 @@ def routes(syncronisation):
         routechoice = input("")
         if routechoice.lower() == "a":
             syncronisation += 30
-            bjs = bj(bjs)
+            syncronisation, bjs, vms, wxs = bj(syncronisation, bjs, vms, wxs)
             return syncronisation
         elif routechoice.lower() == "b":
             syncronisation += 30
-            vms, syncronisation = vm(vms, syncronisation)
+            syncronisation, bjs, vms, wxs = vm(syncronisation, bjs, vms, wxs)
             return syncronisation
         elif routechoice.lower() == "c":
             syncronisation += 10
@@ -792,6 +810,6 @@ def routes(syncronisation):
             ani("That is not an option, please select again!")
             clear_screen2()
 
-syncronisation = routes(syncronisation)
+syncronisation, bjs, vms, wxs = routes(syncronisation, bjs, vms, wxs)
 #Highest addition is 30 (50)
     

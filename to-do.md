@@ -66,6 +66,6 @@ Vessel Connections:
 '' = Soul piece
    = Game or Me
 :: = Joel
-;; = Mitch
+;; = Brad
 @@ = Danger
    
