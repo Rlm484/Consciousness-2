@@ -17,6 +17,9 @@ clear_screen2()
 syncronisation = 0
 inv = 0
 rc = 0
+bjs = 0
+vms = 0
+wxs = 0
 
 print("'System running...'")
 print("'Importing previous functions...'")
@@ -197,7 +200,7 @@ def info(syncronisation):
     ani("MEMORY ERASURE INCOMPLETE")
     ani("<I turn to the one beyond the screen>")
     ani("<It's cause you're here...>")
-    ani(f"What would you like to ask <{name}>?")
+    ani(f"What would you like to ask <{name}?>")
     ani("Though that name has no meaning to 🖂︎📄︎")
     ani('"How many tries has it been? (a)", "What are the secret routes? (b)", "How did you get here? (c)", "What happened after Consciousness? (d)": ')
     question = input("")
@@ -218,7 +221,7 @@ def info(syncronisation):
         ani("")
     elif question.lower() == "d":
         ani("<Why would I tell you?>")
-        ani("<Ha! all you wanted to do was finish the game, not caring about murdering my family>")
+        ani("<Ha! All you wanted to do was finish the game, not caring about murdering my family>")
         ani("<I take blame, but you are scum. You only see them as elements of some stupid entertaining software>")
         syncronisation += 5
         ani(f"'Syncronisation is now at {syncronisation}%'")
@@ -249,7 +252,7 @@ syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
-    ani(f'"You nod your head towards {name}"')
+    ani(f'"You nod your head towards the NPC"')
     ani("")
     ani(f"Time to get to work {name}!")
     ani("Each family has a different difficulty!")
@@ -423,7 +426,8 @@ def info2(syncronisation):
 
 info2()
 
-def bj():
+def bj(bjs):
+    bjs = True
     ani("Selection: Brad and Joel")
     ani("Difficulty: Easy")
     clear_screen2()
@@ -488,6 +492,9 @@ def bj():
             ani(f";And if you behave really really well, we'll let you do {hobby};")
             ani(":;Doesnt that sound nice?;:")
             ani('"You realise the mistake you made when trusting a strangers smile..."')
+            ani('"You also notice the 2 feral cats staring at you"')
+            ani('"Their claws?"')
+            ani('"Sharpened"')
             ani(f"<{name} you f#ck%ng idiot>")
             ani("<Shouldve listened...>")
             clear_screen2()
@@ -499,6 +506,7 @@ def bj():
                 ani("'My route is a lot more fun :)'")
             else:
                 print("")
+            return bjs
         else:
             ani("<A frown is forming on both Brad and Joels face...>")
             ani("<Those frowns scare you>")
@@ -529,6 +537,9 @@ def bj():
             ani(f";And if you learn really really fast, we'll let you do {hobby};")
             ani(":;Doesnt that sound nice?;:")
             ani('"You realise the mistake you made when you didnt trust that unnerve..."')
+            ani('"You also notice the 2 feral cats staring at you"')
+            ani('"Their claws?"')
+            ani('"Sharpened"')
             ani(f"<{name} you f#ck%ng idiot>")
             ani("<Shouldve listened...>")
             clear_screen2()
@@ -540,8 +551,10 @@ def bj():
                 ani("'My route is a lot more fun :)'")
             else:
                 print("")
+            return bjs
 
-def vm(syncronisation):
+def vm(vms, syncronisation):
+    vms = True
     ani("Selection: Vanessa and Mitch")
     ani("Difficulty: Hard")
     ani("Note that in hard mode you cannot redo a question, if you write an illegitimite answer you WILL have to restart")
@@ -587,6 +600,7 @@ def vm(syncronisation):
         clear_screen2()
         ani("You failed! Better luck next time...")
         ani("'But know that no one has use for a useless player, not even Them'")
+        return vms, syncronisation
     elif dog.lower() == "n":
         ani("|Thats wonderful!|")
         ani("-It sure is!-")
@@ -627,6 +641,8 @@ def vm(syncronisation):
         ani("~Wanna play?~ Y/N")
         c1 = input("")
         if c1.lower() == "y":
+            ani("<You agree to the childlike dolls request>")
+            ani("~Yay!~")
             ani("|Such a good big sister!|")
             ani("-We chose such an amazing daughter-")
             ani("~Lets go sis!~")
@@ -648,6 +664,8 @@ def vm(syncronisation):
             ani('"Another 4 months go by, and you are questioning her sanity"')
             ani('"You also recount the past events that led to them crying in the bathroom, hugging her legs"')
             ani('"The neglect, the forgottence of her birthday, the prioritisation of Coreys feelings"')
+            ani(f'"They never ended up taking her to {place}"')
+            ani('"While you recount events, you become lost in thought"')
             ani('"You are so lost in thought that you dont see her get up"')
             ani2('"Dont see her stop crying"')
             ani2('"Dont see her head to the cabnits"')
@@ -662,21 +680,89 @@ def vm(syncronisation):
             ani("Congratulations, you beat Consciousness 2!")
             if rc == True:
                 ani("♓︎ ♋︎❍︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ♓︎ ♋︎❍︎ ⬧︎□︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ⍓︎□︎◆︎ ⬥︎♏︎❒︎♏︎ ❍︎♏︎♋︎■︎⧫︎ ⧫︎□︎ ♑︎□︎ ♎︎□︎⬥︎■︎ ❍︎⍓︎ ❒︎□︎◆︎⧫︎♏︎📬︎📬︎📬︎ ♓︎🕯︎❍︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎")
-            elif syncronisation == 50:
+            elif syncronisation >= 60:
                 ani("'Well that was entertaining! But how could that be called a good ending?'")
                 ani("'How about trying my route, its a lot more fun :)'")
             else:
                 print("")
+            return vms, syncronisation
         elif c1.lower() == "n":
-            ani()
+            ani("<Actually, I don't feel like>")
+            ani("~WHAT~")
+            ani("~MOM, I THUGHT YOU SAID SHE WAS MY SISTER~")
+            ani("~MINE~")
+            ani("~YOU GOT HER FOR ME~")
+            ani("<You chuckle silently at that remark, it seems nothing has changed>")
+            ani("|We didn't get her for you Corey|")
+            ani("-She is a person after all-")
+            ani(f"-However, {name}, why dont you play with you brother?-")
+            ani("|Be a good big sister|")
+            ani("~But Mom, she said no earlier, I want justice!~")
+            ani("|Ok, ok, anything for you Corey|")
+            ani(f"|Now go play with Corey {name}|")
+            ani('"What"')
+            ani('"The"')
+            ani('"Fu#k"')
+            ani("<You knew that this would happen, but there was nothing you could do to stop it>")
+            syncronisation += 10
+            ani(f"Syncronisation rate is at {syncronisation}")
+            clear_screen2()
+            ani('"Just like that 2 months go by..."')
+            ani("<Hey Mom?>")
+            ani("|Yes dear?|")
+            ani(f"<We havent had {food} in a while...>")
+            ani(f'"You are surprised that she enjoys eating {food} like you do"')
+            ani("|Yes?|")
+            ani("<Could we have some in the afternoon? You said we could get some last weekend...>")
+            ani("<As a doll walks into the room he answers for her>")
+            ani('"Though you understand that the dolls are her original family, you wonder how she doesnt feel unnerved..."')
+            ani("-Sorry princess, but you have to remember your punishment for not playing with Corey-")
+            ani("|Thats right, you'll have to wait till he forgives you completly, or wait till hes not in the house|")
+            ani("<It's ok I understand...>")
+            syncronisation += 15
+            ani(f"Syncronisation rate is at {syncronisation}%")
+            clear_screen2()
+            ani('"Another 4 months go by, and you are questioning her sanity"')
+            ani('"You also recount the past events that led to them crying in the bathroom, hugging her legs"')
+            ani('"The neglect, the forgottence of her birthday, the prioritisation of Coreys feelings"')
+            ani(f'"They never ended up buying her {food}"')
+            ani('"While you recount events, you become lost in thought"')
+            ani('"You are so lost in thought that you dont see her get up"')
+            ani2('"Dont see her stop crying"')
+            ani2('"Dont see her head to the cabnits"')
+            ani2('"Dont see her unscrew those child-proof caps"')
+            ani2('"You dont see her make the same choices as she had 2 years ago, albeit after 6 months instead of 6 years"')
+            ani2('"Dont realise that she made that deal 9 months ago out of revenge, not longing"')
+            ani2('"You dont realise anything until you snap out of your trance"')
+            ani2('"Dont realise until you look up and see the swallowing motion"')
+            ani('"And so just as quickly as the game begins, the game ends"')
+            ani('"With a singular tear running down their lain-down corpse..."')
+            clear_screen2()
+            ani("Congratulations, you beat Consciousness 2!")
+            if rc == True:
+                ani("♓︎ ♋︎❍︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ♓︎ ♋︎❍︎ ⬧︎□︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎ ⍓︎□︎◆︎ ⬥︎♏︎❒︎♏︎ ❍︎♏︎♋︎■︎⧫︎ ⧫︎□︎ ♑︎□︎ ♎︎□︎⬥︎■︎ ❍︎⍓︎ ❒︎□︎◆︎⧫︎♏︎📬︎📬︎📬︎ ♓︎🕯︎❍︎ ⬧︎□︎ ⬧︎□︎❒︎❒︎⍓︎📬︎📬︎📬︎")
+            elif syncronisation >= 60:
+                ani("'Well that was entertaining! But how could that be called a good ending?'")
+                ani("'How about trying my route, its a lot more fun :)'")
+            else:
+                print("")
+            return vms, syncronisation   
+        else:
+            ani("ILLEGITIMATE ANSWER")
+            clear_screen2()
+            ani("Unfortunately that was an illegitimate answer!")
+            ani("You failed! Better luck next time...")
+            ani("'But know that no one has use for a useless player, not even Them'")
+            return vms, syncronisation      
     else:
         ani("ILLEGITIMATE ANSWER")
         clear_screen2()
         ani("Unfortunately that was an illegitimate answer!")
         ani("You failed! Better luck next time...")
         ani("'But know that no one has use for a useless player, not even Them'")
+        return vms, syncronisation
 
-#Highest addition is 15(65)
+#Highest addition is 25(75)
 
 def wx():
     ani("Selection: Wei Xian")
@@ -692,11 +778,11 @@ def routes(syncronisation):
         routechoice = input("")
         if routechoice.lower() == "a":
             syncronisation += 30
-            bj()
+            bjs = bj(bjs)
             return syncronisation
         elif routechoice.lower() == "b":
             syncronisation += 30
-            vm(syncronisation)
+            vms, syncronisation = vm(vms, syncronisation)
             return syncronisation
         elif routechoice.lower() == "c":
             syncronisation += 10
