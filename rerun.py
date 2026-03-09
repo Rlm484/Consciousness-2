@@ -128,7 +128,7 @@ def continuation():
     ani2("'You can run... but you can't hide'")
     clear_screen1()
 
-#continuation()
+continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -163,7 +163,7 @@ def intro():
     ani("I believe you'll make the right one...")
     clear_screen1()
 
-#intro()
+intro()
 
 ani("Welcome user! what's your name?: ")
 name = input("")
@@ -190,7 +190,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-#introductions()
+introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -245,7 +245,7 @@ def info(syncronisation):
 
 #Highest addition is 10 (10)
 
-#syncronisation = info(syncronisation)
+syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
@@ -364,11 +364,13 @@ def part1(rc, syncronisation):
     else:
         ani("<You really are useless, we need as much information as possible!>")
         ani('"But youve already made youre choice..."')
+        return rc, syncronisation
     clear_screen2()
+    return rc, syncronisation
 
 #Highest addition is 10 (20)
 
-#rc, syncronisation = part1(rc, syncronisation)
+rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -419,7 +421,7 @@ def info2(syncronisation):
         ani("Good luck with your routes!")
     clear_screen2()
 
-#info2()
+info2()
 
 def bj():
     ani("Selection: Brad and Joel")
