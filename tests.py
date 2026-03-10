@@ -227,31 +227,41 @@
 #print(syncronisation)
 
 #TEST 7
-import time
-import os
-def clear_screen2():
-    print()
-    time.sleep(3)
-    # Check the operating system and run the appropriate clear command
-    if os.name == 'nt':  # Windows
-        os.system('cls')
-    else:  # macOS and Linux
-        os.system('clear')
+#import time
+#import os
+#def clear_screen2():
+#    print()
+#    time.sleep(3)
+#    # Check the operating system and run the appropriate clear command
+#    if os.name == 'nt':  # Windows
+#        os.system('cls')
+#    else:  # macOS and Linux
+#        os.system('clear')
+#ani = print
+#ani(f"Well , which route are you choosing?")
+#ani("a) Brad and Joel")
+#ani("b) Vanessa and Mitch")
+#ani("c) Wei Xian")
+#routechoice = 0
+#while routechoice != "a" or routechoice != "b" or routechoice != "c":
+#    routechoice = input("")
+#    if routechoice == "a":
+#        ani("bj")
+#    elif routechoice == "b":
+#        ani("vm")
+#    elif routechoice == "c":
+#        ani("wx")
+#    else:
+#        ani("That is not an option, please select again!")
+#        routechoice = input("")
+#print("done")
+
+#TEST 8
 ani = print
-ani(f"Well , which route are you choosing?")
-ani("a) Brad and Joel")
-ani("b) Vanessa and Mitch")
-ani("c) Wei Xian")
-routechoice = 0
-while routechoice != "a" or routechoice != "b" or routechoice != "c":
-    routechoice = input("")
-    if routechoice == "a":
-        ani("bj")
-    elif routechoice == "b":
-        ani("vm")
-    elif routechoice == "c":
-        ani("wx")
-    else:
-        ani("That is not an option, please select again!")
-        routechoice = input("")
-print("done")
+syncronisation = 0
+syncronisation += 10
+ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+syncronisation -= 10
+ani("ERROR: SYNCRONISATION REVERSED")
+ani("⧫︎♒︎♋︎■︎🙵 ⍓︎□︎◆︎📬︎📬︎📬︎")
+ani(f"'Syncronisation rate is at {syncronisation}% :)'")
