@@ -257,11 +257,14 @@
 #print("done")
 
 #TEST 8
-ani = print
-syncronisation = 0
-syncronisation += 10
-ani(f"'Syncronisation rate is at {syncronisation}% :)'")
-syncronisation -= 10
-ani("ERROR: SYNCRONISATION REVERSED")
-ani("⧫︎♒︎♋︎■︎🙵 ⍓︎□︎◆︎📬︎📬︎📬︎")
-ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+#ani = print
+#syncronisation = 0
+#syncronisation += 10
+#ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+#syncronisation -= 10
+#ani("ERROR: SYNCRONISATION REVERSED")
+#ani("⧫︎♒︎♋︎■︎🙵 ⍓︎□︎◆︎📬︎📬︎📬︎")
+#ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+
+#TEST 9
+print('"Even you don'+"'"+'t"')
