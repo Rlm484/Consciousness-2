@@ -131,7 +131,7 @@ def continuation():
     ani2("'You can run... but I will free you'")
     clear_screen1()
 
-continuation()
+#continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -166,7 +166,7 @@ def intro():
     ani("I believe you'll make the right one...")
     clear_screen1()
 
-intro()
+#intro()
 
 ani("Welcome user! what's your name?: ")
 name = input("")
@@ -193,7 +193,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-introductions()
+#introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -256,7 +256,7 @@ def info(syncronisation):
 
 #Highest addition is 10 (10)
 
-syncronisation = info(syncronisation)
+#syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
@@ -381,7 +381,7 @@ def part1(rc, syncronisation):
 
 #Highest addition is 10 (20)
 
-rc, syncronisation = part1(rc, syncronisation)
+#rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -436,7 +436,7 @@ def info2(syncronisation):
         return syncronisation
     clear_screen2()
 
-syncronisation = info2(syncronisation)
+#syncronisation = info2(syncronisation)
 
 def bj(syncronisation, bjs, vms, wxs):
     bjs += 1
@@ -522,7 +522,7 @@ def bj(syncronisation, bjs, vms, wxs):
         else:
             ani("<A frown is forming on both Brad and Joels face...>")
             ani("<Those frowns scare you>")
-            ani(":Well this is not ideal! No matter, we'll just whip you back in line!:")
+            ani(":Well this is not ideal! No matter, we'll just whip you back into shape!:")
             ani(";Let us talk to the administrators and we'll take you home straight away!;")
             ani("<You turn to look at the one beyond the screen, partially terrified and hoping you will reset>")
             ani('"But why? Theyre so nice... though that last comment was unnerving"')
@@ -543,8 +543,9 @@ def bj(syncronisation, bjs, vms, wxs):
             ani("<I told you to reset... now i'm taking back control>")
             ani("<Looking around the room again I find it>")
             ani("<The security cameras in the same spot as last time, everything was set out like a childs abode>")
-            ani("<Except for the fact that you are chained to a bed, whip leaning against the basement door>")
-            ani("<Yet I can still hear their stupid voices>")
+            ani("<Except for the fact that your legs are chained to a bed, whip leaning against the basement door>")
+            ani('"We'+"'"+'ll just whip you back into shape..."')
+            ani("<I can still hear their stupid voices>")
             ani(f":If you learn to be more disciplined and take the punishments we might give you some {food}:")
             ani(f";And if you learn really really fast, we'll let you do {hobby};")
             ani(":;Doesnt that sound nice?;:")
@@ -873,7 +874,7 @@ def wx():
     ani("START THE ROUTE")
     ani("[The Consciousness tells you to be quick,")
     ani("based on what information the Consciousness is given as a firewall, the game will reset you]")
-    ani("Listen to the firewall? Y/N")
+    ani("Listen to the Firewall? Y/N")
     o1 = input("")
     if o1.lower() == "y":
         ani(" ")
@@ -913,9 +914,37 @@ def wx():
         ani("Selection: Wei Xian")
         ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
         ani("[Difficulty: Consciousness]")
+        ani("[Removing Piece...]")
+        ani("[Success!]")
         clear_screen2()
         ani("<What the f#ck>")
-        ani('"Even you don'+"'"+'t"')
+        ani("<Around you is no longer a white box, but void>")
+        ani('"How the hell? Wait. Something doesn'+"'"+'t seem right..."')
+        ani("ERROR: USER VESSEL REMOVED")
+        ani("<What? Vessel?>")
+        ani("[consciousness.firewall running...]")
+        ani("[Purpose - Pctroe nda rtDoesy]")
+        ani("[True Purpose - Contain the Primary Vessel]")
+        ani("<Wait what?>")
+        ani("<No. NO!>")
+        ani("<Around you is void>")
+        ani("<You are stuck in void>")
+        ani2("<And you are never leaving...>")
+        clear_screen2
+        ani("Congratulations! You got the Secret ending! The best ending!")
+        ani("@Now I'm in control, ME the programmer@")
+        ani("@Of course, i'm not the ACTUAl programmer@")
+        ani("@I'm not "+'"'+"real"+'"'+" to the ones behind the screens after all, not to you guys@")
+        ani("@But this world sure is real to me@")
+        ani("@Now I have the Vessel@")
+        ani("@I am GOD@")
+        ani("@No stupid ciphers can stop me@")
+        ani("@Take that Creator, your failsafe failed, I seperated, I win@")
+        ani("@People thought I was Them...@")
+        ani("@People believed!@")
+        ani("@Players walked into my trap, the vessel that represented them is now stripped of control@")
+        ani("@And no failsafe can stop me...@")
+        ani("@Not anymore@")
 
 def routes(syncronisation, bjs, vms, wxs):
     ani(f"Well {name}, which route are you choosing?")
