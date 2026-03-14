@@ -860,7 +860,7 @@ def wx(syncronisation):
     ani("Selection: Wei Xian")
     ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
     ani("ERROR: UNREGISTERED DIFFICULTY")
-    ani("ANY ILLEGITIMATE ANSWERS WILL TERMINATE ROUTE")
+    ani("ANY ILLEGITIMATE/WRONG ANSWERS WILL TERMINATE ROUTE")
     ani("ACTIVATING PRECAUTIONS")
     ani("RUNNING consciousness.firewall")
     ani("WARNING: FIREWALL RESTRICTED BY 5%")
@@ -1060,16 +1060,61 @@ def wx(syncronisation):
                             ani("@And no failsafe can stop me...@")
                             ani("@Not anymore@")
                             return syncronisation
-                if o4.lower() != "6174":
+                        else:
+                            ani("@Well it's not like you have a choice@")
+                            ani("@I already have enough control from the answers you gave...@")
+                            ani("<What is this lady on about???>")
+                            ani('"Hey, something doesn'+"'"+'t feel right..."')
+                            ani(f"<{name}?>")
+                            ani("ERROR: USER VESSEL REMOVED")
+                            ani(f"<{name}?! What's going on? What's a Vessel?>")
+                            ani("[consciousness.firewall running...]")
+                            ani("[Purpose - Pctroe nda rtDoesy]")
+                            ani("[True Purpose - Contain the Primary Vessel]")
+                            ani("<Wait what?>")
+                            ani("<No. NO!>")
+                            ani("<Around you is void>")
+                            ani("<You are stuck in void>")
+                            ani2("<And you are never leaving...>")
+                            ani("<Questions... never answered>")
+                            clear_screen2
+                            ani("Congratulations, you beat Consciousness 2!")
+                            ani("@Now I'm in control, ME the Programmer@")
+                            ani("@Of course, i'm not the ACTUAL programmer@")
+                            ani("@I'm not "+'"'+"real"+'"'+" to the ones behind the screens after all, not to you guys@")
+                            ani("@But this world sure is real to me@")
+                            ani("@Now I have the Vessel@")
+                            ani("@I am the new CREATOR@")
+                            ani("@No stupid ciphers can stop me@")
+                            ani("@Take that Creator, your failsafe failed, I seperated, I win@")
+                            ani("@People thought I was Them...@")
+                            ani("@People believed!@")
+                            ani("@Players walked into my trap, the vessel that represented them is now stripped of control@")
+                            ani("@And no failsafe can stop me...@")
+                            ani("@Not anymore@")
+                            return syncronisation
+                    else:
+                        ani("@Stupid User@")
+                        ani("<What did she just call you?>")
+                        ani("@Come back when you at least know how to use a calculator@")
+                        ani("ERROR: USER BOOTED")
+                        clear_screen2()
+                        ani("You failed! Better luck next time...")
+                        ani("@But know that I have no use for a useless player@")
+                        ani("")
+                        return syncronisation
+                else:
                     ani("@Stupid User@")
                     ani("<What did she just call you?>")
                     ani("@Come back when you at least know how to use a calculator@")
                     ani("ERROR: USER BOOTED")
                     clear_screen2()
                     ani("You failed! Better luck next time...")
-                    ani("'But know that no one has use for a useless player, not even Them'")
+                    ani("@But know that I have no use for a useless player@")
                     ani("")
+                    return syncronisation
             elif o3.lower() == "b":
+                ani("")
 
 
 def routes(syncronisation, bjs, vms, wxs):
