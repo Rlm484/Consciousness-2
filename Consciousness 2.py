@@ -856,7 +856,7 @@ def vm(syncronisation, bjs, vms, wxs):
 
 #Highest addition is 25(75)
 
-def wx():
+def wx(syncronisation):
     ani("Selection: Wei Xian")
     ani("Difficulty: ☞︎✋︎☠︎✌︎☹︎☹︎✡︎")
     ani("ERROR: UNREGISTERED DIFFICULTY")
@@ -946,6 +946,7 @@ def wx():
         ani("@Players walked into my trap, the vessel that represented them is now stripped of control@")
         ani("@And no failsafe can stop me...@")
         ani("@Not anymore@")
+        return syncronisation
     elif o1.lower() == "n":
         ani("[The Consciousness tells you to hurry]")
         ani("<Can we really trust this guy?>")
@@ -959,6 +960,9 @@ def wx():
         ani("ERROR: ROUTE NOT STARTED")
         ani("Running Failsafe...")
         ani2("'Finally, that took a while...'")
+        syncronisation += 20
+        #Sync at 20
+        ani(f"'Syncronisation rate is at {syncronisation}% :)'")
         clear_screen2()
         ani("<What the hell>")
         ani('"How many systems are there?"')
@@ -981,6 +985,9 @@ def wx():
             while o2.lower() != "y":
                 ani("ERROR: GAME NOT STARTED")
         else:
+            syncronisation += 5
+            #Sync at 25
+            ani(f"'Syncronisation rate is at {syncronisation}% :)'")
             ani("<You walk towards the door, unaware of what's going on>")
             ani("<Hands resting on the handle, and three faceless entities beside you, you walk in>")
             clear_screen2()
@@ -996,7 +1003,21 @@ def wx():
             ani("<How should I respond?>")
             ani("a) Go ahead, I don't mind b) Screw this, who are you really? c) What sort of questions")
             o3 = input("")
-
+            if o3.lower == "a":
+                ani("<You speak as if someone is speaking for you>")
+                ani("<Go ahead, I don't mind>")
+                ani("@Wonderful!@")
+                ani("@Question 1) What is 63*98@")
+                ani("Please answer this yourself")
+                o4 = input("")
+                if o4 == "6174":
+                    ani("")
+                    ani("@Great work! You passed the basic math question...@")
+                    ani("@Now heres a harder one: @")
+                    ani("@Question 2) What is 2,000,000,000 - 2*194567@")
+                    o5 = input("")
+                    if o5 == "1999610866":
+                        ani("@You're such an intelligent child@")
 
 def routes(syncronisation, bjs, vms, wxs):
     if syncronisation == 0: 
@@ -1024,7 +1045,7 @@ def routes(syncronisation, bjs, vms, wxs):
                 ani("ERROR: SYNCRONISATION REVERSED")
                 ani("⧫︎♒︎♋︎■︎🙵 ⍓︎□︎◆︎📬︎📬︎📬︎")
                 ani(f"'Syncronisation rate is at {syncronisation}% :)'")
-                wx()
+                syncronisation = wx(syncronisation)
                 return syncronisation, bjs, vms, wxs
             else:
                 ani("That is not an option, please select again!")
