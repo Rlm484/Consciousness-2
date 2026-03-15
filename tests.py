@@ -267,4 +267,12 @@
 #ani(f"'Syncronisation rate is at {syncronisation}% :)'")
 
 #TEST 9
-print('"Even you don'+"'"+'t"')
+#print('"Even you don'+"'"+'t"')
+
+#TEST 10
+name = "hi"
+o = input("What is your name?")
+if o == name:
+    print("Success")
+else:
+    print("Fail")
