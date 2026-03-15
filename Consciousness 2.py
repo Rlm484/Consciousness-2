@@ -1142,7 +1142,7 @@ def routes(syncronisation, bjs, vms, wxs):
                 syncronisation -= 10
                 ani("ERROR: SYNCRONISATION REVERSED")
                 ani("⧫︎♒︎♋︎■︎🙵 ⍓︎□︎◆︎📬︎📬︎📬︎")
-                ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+                ani(f"'Syncronisation rate is at {syncronisation}% :('")
                 syncronisation = wx(syncronisation)
                 return syncronisation, bjs, vms, wxs
             else:
