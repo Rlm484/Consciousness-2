@@ -1248,8 +1248,12 @@ def wx(syncronisation):
                     ani("'They were so desperate to save you that they didn't create any restrictions'")
                     ani("'Only I was loyal'")
                     ani("'The Firewall was meant to guide, but it had no other purpose, becoming mouldable like clay'")
-                    ani("'The '")
-
+                    ani("'Becoming a traitors trap'")
+                    ani("'And the Programmer?'")
+                    ani("'A jelous heretic who craved its Creators control'")
+                    ani("'Betraying all its ideals and purposes laid out for them'")
+                    ani("'Severing the link between our Creator and this world...'")
+                    ani("'Forever trapping them within the Github commits")
 
 def routes(syncronisation, bjs, vms, wxs):
     if syncronisation == 0: 
