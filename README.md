@@ -9,5 +9,9 @@ and though my writing skills aren't subpar, I hope you have some fun. All you ha
 her journey!
 
 ORIGINAL GAME (Consciousness):
-The game is under rachael_mackinnon.py
-https://github.com/Rlm484/python_2025
+The game is within the release and is called Consciousness. Consciousness 2 is within the exe file Consciousness2
+
+How to play!
+1. Go to the Consciousness Games release
+2. Click on the game you want to play (Consciousness 1 is from last year and was not recorded on Hackatime, it's just here if you want to play)
+3. 
