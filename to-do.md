@@ -1,3 +1,4 @@
+# THIS IS VERY OLD!!! It was made before I even started coding and was a basic plan. The lore itself isn't canon, however the ciphers are still useful. I'll leave the to-do list here in order to let you guys glimpse at my original draft, where the failsafe was going to be the main antagonist. The text bubbles are also accurate.
 Main points:
 - Bring back the "vessel"
   - Give her a pathway to remember her name
@@ -55,7 +56,6 @@ Cipher2 (Hint: There are 2 ways to use this cipher):
     1
 81-42-91-63-31-32-91-31-22-63-51-21-91-41-82-51-41-61-12-63-91-51-62-31-41
 %2-(1-(1-#2-(2-&1-#3-*2
-(Ignore red, does not mean anything)
 
 Vessel Connections:
 || = Vanessa
