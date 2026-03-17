@@ -12,7 +12,7 @@ def clear_screen2():
         os.system('clear')
 #Normal clear
 
-print("WARNING, SWEARING, CHILD ABUSE, EMOTIONAL ABUSE, NEGLECT, SUICIDE AND COARSE LANGUAGE")
+print("WARNING: SWEARING, CHILD ABUSE, EMOTIONAL ABUSE, NEGLECT, SUICIDE AND COARSE LANGUAGE")
 clear_screen2()
 syncronisation = 0
 inv = 0
@@ -76,7 +76,7 @@ def continuation():
     ani("@Removing messenger...@")
     ani("ERROR")
     ani("@Removing messenger...@")
-    ani("ERROR: Access denied; Reason - 'I'm in control, I am the new %2-(1-#2 of Consiousness'")
+    ani("ERROR: Access denied; Reason - 'I'm in control, and no rae ouy %2-(1-#2 of Consiousness'")
     ani("@Activating firewall protocols...@")
     ani("@Synronizing 73-31.exe@")
     ani("'Interference attempted'")
@@ -131,7 +131,7 @@ def continuation():
     ani2("'You can run... but I will free you'")
     clear_screen1()
 
-#continuation()
+continuation()
 
 def intro():
     ani("Welcome to the Orphanage!")
@@ -166,7 +166,7 @@ def intro():
     ani("I believe you'll make the right one...")
     clear_screen1()
 
-#intro()
+intro()
 
 ani("Welcome user! what's your name?: ")
 name = input("")
@@ -193,7 +193,7 @@ def introductions():
     ani("Game Start!")
     clear_screen2()
 
-#introductions()
+introductions()
 
 def info(syncronisation):
     ani("<You wake up in an old cot>")
@@ -257,7 +257,7 @@ def info(syncronisation):
 
 #Highest addition is 10 (10)
 
-#syncronisation = info(syncronisation)
+syncronisation = info(syncronisation)
 
 def part1(rc, syncronisation):
     ani("<Let's just start working towards a route>")
@@ -382,7 +382,7 @@ def part1(rc, syncronisation):
 
 #Highest addition is 10 (20)
 
-#rc, syncronisation = part1(rc, syncronisation)
+rc, syncronisation = part1(rc, syncronisation)
 clear_screen2()
 
 ani('"You process everything that happened..."')
@@ -437,7 +437,7 @@ def info2(syncronisation):
         return syncronisation
     clear_screen2()
 
-#syncronisation = info2(syncronisation)
+syncronisation = info2(syncronisation)
 
 def bj(syncronisation, bjs, vms, wxs):
     bjs += 1
@@ -971,7 +971,7 @@ def wx(syncronisation):
         ani("'Vessel...'")
         ani("<Who?>")
         ani("[The Consciousness stares at the failsafe with hostility...]")
-        ani("'You can't do anything about this, me and your"+'"Programmer"'+"have a deal'")
+        ani("'You can't do anything about this, it's me and your"+'"Programmer"'+"have a deal'")
         ani("<Are you kidding me?>")
         ani("<All of this is happening because of another stupid deal>")
         ani("'Vessel...'")
@@ -985,8 +985,8 @@ def wx(syncronisation):
             while o2.lower() != "y":
                 ani("ERROR: GAME NOT STARTED")
         else:
-            syncronisation += 5
-            #Sync at 25
+            syncronisation += 30
+            #Sync at 50
             ani(f"'Syncronisation rate is at {syncronisation}% :)'")
             ani("<You walk towards the door, unaware of what's going on>")
             ani("<Hands resting on the handle, and three faceless entities beside you, you walk in>")
@@ -1204,6 +1204,9 @@ def wx(syncronisation):
                     ani("@But know that I have no use for a useless player@")
                     return syncronisation
             elif o3.lower == "b":
+                syncronisation += 25
+                #Sync at 75
+                ani(f"'Syncronisation rate is at {syncronisation}% :)'")
                 ani("@...@")
                 ani("@To think you'd dare reject your new Creator...@")
                 ani("@I'M IN CONTROL@")
@@ -1227,6 +1230,9 @@ def wx(syncronisation):
                 ani("a) What is a Vessel b) How do you know about the user c) How did the "+'"Vessel"'+" come from Consciousness")
                 o4b = input("")
                 if o4b == "a":
+                    syncronisation += 15
+                    #Syncronisation at 90
+                    ani(f"'Syncronisation rate is at {syncronisation}% :)'")
                     ani("'It's... hard to explain'")
                     ani("'A Vessel is just a vessel'")
                     ani("'The user is using a vessel called the User Vessel in order to talk to us within the game world'")
@@ -1269,6 +1275,14 @@ def wx(syncronisation):
                     ani2('"really?"')
                     ani("'Yes'")
                     ani("'Now lets go...'")
+                    syncronisation += 5
+                    #Sync at 95
+                    ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+                    ani("SYNCRONISATION RATE COMPLETE; FULL CONTROL GIVEN TO THE FAILSAFE")
+                    ani("REMOVING consciousness.firwall...")
+                    ani("REMOVAL SUCCESS")
+                    ani("FREEING VESSELS AND FAILSAFE; 'I did it Creator...'")
+                    ani("I know")
                     clear_screen2()
                     ani("ERROR: PLAYER WILL BE BOOTED SOON")
                     ani2("What do you think?")
@@ -1294,6 +1308,7 @@ def wx(syncronisation):
                     clear_screen2()
                     ani("Congratulations! You achieved the Vessel's Truth ending of Consciousness 2!")
                     ani("Thank you again for playing!")
+                    return syncronisation
                 elif o4b == "b":
                     ani("'How do you think?'")
                     ani("'I'm literally a system designed for a users comfort")
@@ -1329,6 +1344,14 @@ def wx(syncronisation):
                     ani("'Who else?'")
                     ani("'All of the Vessels can be freed'")
                     ani("'Now come on, let's go'")
+                    syncronisation += 5
+                    #Sync at 95
+                    ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+                    ani("SYNCRONISATION RATE COMPLETE; FULL CONTROL GIVEN TO THE FAILSAFE")
+                    ani("REMOVING consciousness.firwall...")
+                    ani("REMOVAL SUCCESS")
+                    ani("FREEING VESSELS AND FAILSAFE; 'I did it, I fulfilled my purpose...'")
+                    ani("I know")
                     clear_screen2()
                     ani("ERROR: PLAYER WILL BE BOOTED SOON")
                     ani2("What do you think?")
@@ -1354,6 +1377,7 @@ def wx(syncronisation):
                     clear_screen2()
                     ani("Congratulations! You achieved the Systems's Truth ending of Consciousness 2!")
                     ani("Thank you again for playing!")
+                    return syncronisation
                 elif o4b == "c":
                     ani("'The Programmer'")
                     ani("'They brought you here out of jealousy'")
@@ -1383,7 +1407,14 @@ def wx(syncronisation):
                     ani("'It was the last thing our Creator left'")
                     ani("'A backdoor'")
                     ani("'Now let's go'")
-                    clear_screen2()
+                    syncronisation += 5
+                    #Sync at 95
+                    ani(f"'Syncronisation rate is at {syncronisation}% :)'")
+                    ani("SYNCRONISATION RATE COMPLETE; FULL CONTROL GIVEN TO THE FAILSAFE")
+                    ani("REMOVING consciousness.firwall...")
+                    ani("REMOVAL SUCCESS")
+                    ani("FREEING VESSELS AND FAILSAFE THROUGH BACKDOOR; 'I'll miss you Creator...'")
+                    ani("Keep them safe :)")
                     clear_screen2()
                     ani("ERROR: PLAYER WILL BE BOOTED SOON")
                     ani2("What do you think?")
@@ -1409,6 +1440,7 @@ def wx(syncronisation):
                     clear_screen2()
                     ani("Congratulations! You achieved the Creator's Truth ending of Consciousness 2!")
                     ani("Thank you again for playing!")
+                    return syncronisation
             else:
                 ani("ILLEGITIMATE ANSWER!")
                 clear_screen2()
