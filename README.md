@@ -13,5 +13,10 @@ The game is within the release and is called Consciousness. Consciousness 2 is w
 
 How to play!
 1. Go to the Consciousness Games release
-2. Click on the game you want to play (Consciousness 1 is from last year and was not recorded on Hackatime, it's just here if you want to play)
-3. 
+2. Click on the game (.exe file) you want to play (Consciousness 1 is from last year and was not recorded on Hackatime; it's just here if you want to play)
+3. Once the exe file is downloaded, run and play!
+
+Process:
+1. Storyboarding! I wrote out my entire story and the majority of route variations in my notebook; a part of it is in the game files (within the repo), which only have the character overviews and some references I made. It is in the SPOILERS file
+2. Coding! I coded the entire game, which took 24 hrs (Including testing)
+3. Storyboarding! (Within an MD): I rewrote a part of my story (check number 1 for more info), which was the character overview and references in my files
