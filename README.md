@@ -20,3 +20,9 @@ Process:
 1. Storyboarding! I wrote out my entire story and the majority of route variations in my notebook; a part of it is in the game files (within the repo), which only have the character overviews and some references I made. It is in the SPOILERS file
 2. Coding! I coded the entire game, which took 24 hrs (Including testing)
 3. Storyboarding! (Within an MD): I rewrote a part of my story (check number 1 for more info), which was the character overview and references in my files
+
+All files (Main ones):
+Consciousness2.py: The actual game code
+SPOILERS.md: The character overviews
+tests.py: Where I did code testing for the game
+to-do.md: A draft I made before I actually storyboarded; It's not in the Process because it didn't really hold much weight or contribution in the actual game.
