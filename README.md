@@ -23,6 +23,9 @@ Process:
 
 All files (Main ones):
 Consciousness2.py: The actual game code
+
 SPOILERS.md: The character overviews
+
 tests.py: Where I did code testing for the game
+
 to-do.md: A draft I made before I actually storyboarded; It's not in the Process because it didn't really hold much weight or contribution in the actual game.
